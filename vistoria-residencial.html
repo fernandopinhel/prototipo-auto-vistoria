@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Meta tags Obrigatórias -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link href="css/docs.min.css" rel="stylesheet">
+        <link href="css/bradseg_icons.css" rel="stylesheet">
+
+        <!-- Estilo CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/estilo.css">
+
+        <!-- Datepicker -->
+        <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+
+        <!-- Icons fontawesome -->
+        <link href="libs/fontawesome-free-5.9.0-web/css/fontawesome.css" rel="stylesheet">
+        <link href="libs/fontawesome-free-5.9.0-web/css/brands.css" rel="stylesheet">
+        <link href="libs/fontawesome-free-5.9.0-web/css/solid.css" rel="stylesheet">
+
+        <title>Auto Vistoria</title>
+    </head>
+    <body>
+        <header class="vistoria residencial">
+          <!-- Navbar -->
+          <nav class="navbar navbar-expand-lg nav-mso display-desk">
+            <a class="navbar-brand mr-auto mr-lg-0" href="#"></a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+              <!--span class="navbar-toggler-icon"></span-->
+              <div class="navbar-toggler-icon" onclick="toggleFunction(this)">
+                  <div class="bar1"></div>
+                  <div class="bar2"></div>
+                  <div class="bar3"></div>
+                </div>
+            </button>
+            <div class="navbar-collapse offcanvas-collapse">
+              <ul class="navbar-nav padding-nav mx-auto">
+                <li class="nav-item menu-principal">
+                  <a class="nav-link" href="#">Vistoria automóvel</a>
+                </li>
+                <li class="nav-item menu-principal active">
+                  <a class="nav-link" href="#">Vistoria residencial</a>
+                </li>
+              </ul>
+              <div class="nav-user">
+                  <a href="#">
+                    <img src="img/perfil-usuario.png">
+                  </a>
+              </div>
+              <ul class="navbar-nav ml-auto ml-auto-ajustes nav-responsive-none">
+                  <li class="nav-item">
+                    <span class="nav-link white padding-li-itens" href="#">Carolina Santos</span>
+                    <span><a class="nav-link yellow padding-li-itens" href="#">Sair</a></span>
+                  </li>
+                </ul>
+            </div>
+          </nav>
+          <!-- Navbar Responsiva -->
+          <nav class="navbar navbar-expand-lg nav-mso display-mobile">
+            <a class="navbar-brand mr-auto mr-lg-0" href="#"></a>
+            <div class="nav-user">
+              <a class="nav-link" href="#">Automóvel</a>
+              <a class="nav-link active" href="#">Residencial</a>
+            </div>
+            <div class="nav-sair float-right">
+              <a href="#">
+                <img src="img/icon-sair.png">
+              </a>
+            </div>
+          </nav>
+        </header>
+        <section class="container design-process-section vistoria residencial">
+
+            <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#dados-pessoais" aria-controls="dados-pessoais" role="tab" data-toggle="tab">
+                    <span class="border-active">
+                      <span>
+                        <img src="img/icon-dados-pessoais.png">
+                      </span>
+                    </span>
+                    <p>Dados pessoais</p>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#dados-veiculos" aria-controls="dados-veiculos" role="tab" data-toggle="tab">
+                    <span class="border-active">
+                      <span>
+                        <img src="img/icon-dados-veiculos.png">
+                      </span>
+                    </span>
+                    <p>Dados da residência</p>
+                  </a>
+                </li>
+                <li role="presentation">
+                  <a href="#vistoria" aria-controls="vistoria" role="tab" data-toggle="tab">
+                    <span class="border-active">
+                      <span>
+                        <img src="img/icon-vistoria.png">
+                      </span>
+                    </span>
+                    <p>Vistoria</p>
+                  </a>
+                </li>
+              </ul>
+
+            <div class="tab-content">
+              <!-- DADOS PESSOAIS -->
+              <div role="tabpanel" class="tab-pane active" id="dados-pessoais">
+                <div class="design-process-content bg-blank">
+                  <h4>Dados pessoais</h4>
+                  <form>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-12 col-md-8">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Nome</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-5 col-md-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">CPF</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-7 col-md-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">E-mail</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-3">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Telefone</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-5">
+                        <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
+                          <div class="form">
+                            <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder=""  autocomplete="off" required />
+                            <label for="text" class="label-name">
+                              <span class="content-name">
+                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
+                                <span>Data de nascimento</span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="buttons-tab">
+                  <button type="button" name="button" class="btn btn-primary float-right next" role="tab" data-toggle="tab" aria-controls="negociacao" onclick="">Próximo</button>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <!-- DADOS VEÍCULO -->
+              <div role="tabpanel" class="tab-pane" id="dados-veiculos">
+                <div class="design-process-content bg-blank">
+                  <h4>Dados da residência</h4>
+
+                  <form>
+                    <div class="row">
+                      <div class="col-12 col-sm-3 col-md-2 col-lg-2">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">CEP</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-9 col-md-8 col-lg-8">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Logradouro</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-2 col-md-2 col-lg-2">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Nº</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4 col-md-3 col-lg-2">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Complemento</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6 col-md-9 col-lg-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Bairro</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-10 col-md-10 col-lg-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Cidade</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-2 col-md-2 col-lg-2">
+                        <div class="form-select">
+                          <select class="form-control">
+                            <option>UF</option>
+                            <option>RJ</option>
+                            <option>SP</option>
+                            <option>MG</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="buttons-tab">
+                  <button type="button" name="button" class="btn btn-second float-left prev">Anterior</button>
+                  <button type="button" name="button" class="btn btn-primary float-right next">Próximo</button>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+              <!-- DETALHES DA VISTORIA -->
+              <div role="tabpanel" class="tab-pane" id="vistoria">
+                <div class="design-process-content bg-blank">
+                  <h4>Vistoria</h4>
+                  <form>
+                    <div class="row-sub">
+                      <h6>Quantidade de cômodos</h6>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-12 col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Quarto</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Sala</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Cozinha</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Banheiro</span>
+                          </label>
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-8">
+                        <div class="form">
+                          <input type="text" name="text" autocomplete="off" required="">
+                          <label for="text" class="label-name">
+                            <span class="content-name">Varanda ou quintal</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <div class="row gallery">
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                      <div class="animation active">
+                        <img src="img/sala.png">
+                        <img src="img/check.png" class="check">
+                        <h3>Sala</h3>
+                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
+                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
+                         </form>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                      <div class="animation">
+                        <img src="img/quarto.png">
+                        <h3>Quarto</h3>
+                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
+                           <!-- this is your file input tag, so i hide it!-->
+                           <!-- i used the onchange event to fire the form submission-->
+                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
+                           <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
+                           <!-- <input type="submit" value='submit' > -->
+                         </form>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                      <div class="animation">
+                        <img src="img/banheiro.png">
+                        <h3>Banheiro</h3>
+                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
+                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
+                         </form>
+                       </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                      <div class="animation">
+                        <img src="img/cozinha.png">
+                        <h3>Cozinha</h3>
+                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
+                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
+                         </form>
+                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="buttons-tab">
+                  <button type="button" name="button" class="btn btn-second float-left prev">Anterior</button>
+                  <button type="button" name="button" class="btn btn-final float-right" data-toggle="modal" data-target="#finalizar-vistoria">Finalizar vistoria</button>
+                  <div class="clearfix"></div>
+                </div>
+              </div>
+            </div>
+
+        </section>
+
+        <div class="modal fade" id="finalizar-vistoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Finalizar vistoria</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col-12">
+                    <p>Tem certeza que deseja enviar a vistoria?</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-cancelar" data-dismiss="modal">Não</button>
+                <button type="button" class="btn btn-final">Sim, pode enviar!</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <footer>
+          <img src="img/logo-ebix.png" class="check">
+        </footer> -->
+
+
+
+        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+        <script src="js/jquery-3.3.1.slim.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/offcanvas.js"></script>
+        <script  src="js/script.js"></script>
+
+        <!-- animação telas -->
+        <!-- <script>
+          $(document).ready(function(){
+            $("li.menu-etapas").click(function(){
+              $(".tab-pane").addClass("animation-to-right");
+              $(".tab-pane").removeClass("animation-to-left");
+            });
+          });
+        </script>
+
+        <script>
+          $(document).ready(function(){
+            $("li.menu-etapas").click(function(){
+              $(".tab-pane").addClass("animation-to-left");
+              $(".tab-pane").removeClass("animation-to-right");
+            });
+          });
+        </script> -->
+
+
+        <script>
+          $(document).ready(function(){
+            $("li.menu-etapas").prev().removeClass({"animation-to-right"});
+            $("li.menu-etapas").next().removeClass({"animation-to-right"});
+          });
+        </script>
+
+        <script>
+          $(document).ready(function(){
+            $("button.next").click(function(){
+              $(".tab-pane").addClass("animation-to-left");
+              $(".tab-pane").removeClass("animation-to-right");
+            });
+          });
+        </script>
+
+        <script>
+          $(document).ready(function(){
+            $("button.prev").click(function(){
+              $(".tab-pane").addClass("animation-to-right");
+              $(".tab-pane").removeClass("animation-to-left");
+            });
+          });
+        </script>
+         <!-- fim animação telas -->
+
+        <!-- Scripts NAVTABS -->
+        <script type="text/javascript">
+          // script for tab steps
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+              var href = $(e.target).attr('href');
+              var $curr = $(".process-model  a[href='" + href + "']").parent();
+
+              $('.process-model li').removeClass();
+
+              $curr.addClass("active");
+              $curr.prevAll().addClass("visited");
+            });
+          // end  script for tab steps
+        </script>
+
+
+        <script type="text/javascript">
+          (function($) {
+            'use strict';
+            $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
+              var $target = $(e.target);
+              var $tabs = $target.closest('.nav-tabs-responsive');
+              var $current = $target.closest('li');
+              var $parent = $current.closest('li.dropdown');
+              $current = $parent.length > 0 ? $parent : $current;
+              var $next = $current.next();
+              var $prev = $current.prev();
+              var updateDropdownMenu = function($el, position){
+                $el
+                  .find('.dropdown-menu')
+                  .removeClass('pull-xs-left pull-xs-center pull-xs-right')
+                  .addClass( 'pull-xs-' + position );
+              };
+
+              $tabs.find('>li').removeClass('next prev');
+              $prev.addClass('prev');
+              $next.addClass('next');
+
+              updateDropdownMenu( $prev, 'left' );
+              updateDropdownMenu( $current, 'center' );
+              updateDropdownMenu( $next, 'right' );
+            });
+
+            })(jQuery);
+        </script>
+
+        <script type="text/javascript">
+          $(document).ready(function() {
+              /*disable non active tabs
+              $('.nav li').not('.active').addClass('disabled');
+              $('.nav li').not('.active').find('a').removeAttr("data-toggle");*/
+
+              $('button.next').click(function(){
+                  /*enable next tab*/
+                  $('.nav li.active').next('li').removeClass('disabled');
+                  $('.nav li.active').next('li').find('a').attr("data-toggle","tab").trigger("click");
+              });
+
+              $('button.prev').click(function() {
+                  $('.nav li.active').prev('li').find('a').trigger("click");
+              });
+          });
+        </script>
+        <!-- FIM Scripts NAVTABS -->
+
+        <!-- Script Toogle -->
+        <script>
+        function toggleFunction(x) {
+            x.classList.toggle("change");
+        }
+        </script>
+        <!-- Script Tooltip -->
+        <script>
+            jQuery(function() {
+            jQuery('[data-toggle="tooltip"]').tooltip();
+            })
+        </script>
+        <!-- Script Popover -->
+        <script>
+            $(document).ready(function(){
+              $('[data-toggle="popover"]').popover();
+            });
+
+            $("[data-toggle=popover]")
+            .popover({html:true})
+        </script>
+        <!-- Script carregar fotos -->
+        <script>
+            function getFile() {
+            document.getElementById("upfile").click();
+            }
+
+            function sub(obj) {
+            var file = obj.value;
+            var fileName = file.split("\\");
+            document.getElementById("carregarImg").innerHTML = fileName[fileName.length - 1];
+            document.myForm.submit();
+            event.preventDefault();
+            }
+        </script>
+
+        <!-- Script Datepicker-->
+        <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+        <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.pt-BR.js" charset="UTF-8"></script>
+        <script type="text/javascript">
+          $('.form_date').datetimepicker({
+            language:  'pt-BR',
+            autoclose: 1,
+            minView: 2,
+            format: "dd/mm/yyyy"
+            });
+        </script>
+        <script>
+          // Máscara formato data no campo date 99/99/9999
+          function mascaraData(campo, e){
+            var kC = (document.all) ? event.keyCode : e.keyCode;
+            var data = campo.value;
+            if( kC!=8 && kC!=46 ){
+              if( data.length==2 ){
+                campo.value = data += '/';
+              }else if( data.length==5){
+              campo.value = data += '/';
+            }else
+          campo.value = data;
+          }
+        }
+        </script>
+        <!-- Script display none box-item form select -->
+        <script>
+          $(document).ready(function(){
+            $(".add-mais").click(function(){
+              // $(".box-item").addClass("display-none-box");
+              $(".box-item").removeClass("display-none-box");
+            });
+          });
+        </script>
+    </body>
+</html>
