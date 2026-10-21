@@ -1,10 +1,12 @@
 /*
- * Auto Vistoria — tela de login (protótipo).
+ * Auto Vistoria: tela de login (protótipo).
  * Não há autenticação real: o CPF é validado apenas no navegador e nunca é
  * enviado, salvo ou colocado na URL.
  */
-(function ($) {
+(function () {
   'use strict';
+
+  var CPF_DEMO = '529.982.247-25';
 
   function somenteDigitos(valor) {
     return String(valor || '').replace(/\D/g, '');
@@ -30,27 +32,52 @@
     return true;
   }
 
-  $(function () {
-    var $form = $('.js-login-form');
-    var $cpf = $('#login-cpf');
-    var $erro = $('#login-erro');
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = document.getElementById('login-form');
+    var cpf = document.getElementById('login-cpf');
+    var erro = document.getElementById('login-cpf-erro');
 
-    $cpf.on('input', function () {
-      this.value = formatarCpf(this.value);
-      $erro.attr('hidden', true);
-      this.setCustomValidity('');
+    function mostrarErro(mensagem) {
+      erro.textContent = '';
+      erro.appendChild(window.AV.icon('alert'));
+      erro.appendChild(document.createTextNode(mensagem));
+      erro.hidden = false;
+      cpf.setAttribute('aria-invalid', 'true');
+    }
+
+    function limparErro() {
+      erro.hidden = true;
+      cpf.removeAttribute('aria-invalid');
+    }
+
+    cpf.addEventListener('input', function () {
+      cpf.value = formatarCpf(cpf.value);
+      if (cpf.getAttribute('aria-invalid') === 'true' && cpfValido(cpf.value)) limparErro();
     });
 
-    $form.on('submit', function (e) {
+    document.getElementById('login-demo').addEventListener('click', function () {
+      cpf.value = CPF_DEMO;
+      limparErro();
+      cpf.focus();
+      window.AV.announce('Preenchemos um CPF de exemplo para você.');
+    });
+
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (!cpfValido($cpf.val())) {
-        $erro.removeAttr('hidden');
-        $cpf[0].setCustomValidity('CPF inválido');
-        $cpf.trigger('focus');
+      var digitos = somenteDigitos(cpf.value);
+      if (!digitos) {
+        mostrarErro('Digite seu CPF para continuar.');
+      } else if (digitos.length < 11) {
+        mostrarErro('O CPF tem 11 números. Confira se faltou algum.');
+      } else if (!cpfValido(digitos)) {
+        mostrarErro('Esse CPF não parece válido. Pode conferir os números?');
+      } else {
+        // Protótipo: segue direto para a home, sem enviar o CPF.
+        window.AV.store.set('sessao', { inicio: Date.now() });
+        window.location.href = 'home.html';
         return;
       }
-      // Protótipo: segue direto para a home, sem enviar dados.
-      window.location.href = 'home.html';
+      cpf.focus();
     });
   });
-})(jQuery);
+})();

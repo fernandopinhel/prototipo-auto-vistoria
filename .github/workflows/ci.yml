@@ -27,3 +27,9 @@ jobs:
             echo "::error::Há scripts ou handlers inline — mova para js/."
             exit 1
           fi
+      - name: Sem estilos inline (CSP)
+        run: |
+          if grep -nE '\sstyle=|<style' *.html; then
+            echo "::error::Há estilos inline — a CSP bloqueia; mova para css/app.css."
+            exit 1
+          fi
