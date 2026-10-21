@@ -1,115 +1,197 @@
-# Protótipo Auto Vistoria
+<div align="center">
 
-Protótipo navegável de **autovistoria de seguros** para **automóvel** e **residência**.
-O segurado entra com o CPF, escolhe o tipo de vistoria e segue um fluxo em etapas:
-preenche os próprios dados, informa os dados do bem e envia as fotos pedidas
-(dianteira, traseira, painel, motor, chassi, cômodos da casa etc.).
+<img src="img/favicon.svg" alt="" width="72" height="72">
 
-O projeto é **front-end estático**: HTML, CSS e JavaScript, sem back-end. Ele serve para
-validar a jornada, a interface e a interação com usuários e stakeholders antes do
-desenvolvimento do produto real.
+# Auto Vistoria
 
-![Tela de vistoria de automóvel](docs/screenshots/vistoria-automovel.jpg)
+**Case de UX/UI e front-end: autovistoria de seguro de automóvel e residência pelo celular.**
+
+[![CI](https://github.com/fernandopinhel/prototipo-auto-vistoria/actions/workflows/ci.yml/badge.svg)](https://github.com/fernandopinhel/prototipo-auto-vistoria/actions/workflows/ci.yml)
+![HTML, CSS e JS puros](https://img.shields.io/badge/stack-HTML%20·%20CSS%20·%20JS%20puros-1667c4)
+![WCAG 2.2 AA](https://img.shields.io/badge/acessibilidade-WCAG%202.2%20AA-1b7a43)
+![Sem dependências](https://img.shields.io/badge/dependências%20de%20runtime-0-5b6779)
+
+[Ver o protótipo](https://fernandopinhel.github.io/prototipo-auto-vistoria/) ·
+[Como rodar](#como-rodar-localmente) ·
+[O case](#o-case)
+
+![Tela inicial do Auto Vistoria](docs/screenshots/home.jpg)
+
+</div>
+
+> **Este é um case de portfólio.** O projeto nasceu em 2020, numa empresa onde trabalhei,
+> e foi recriado aqui para mostrar o processo e o resultado. Para preservar a empresa e o
+> cliente, a interface usa a marca fictícia **Lar&Via Seguros**. Nomes, CPFs e protocolos
+> são de exemplo, e nenhum dado digitado sai do seu navegador.
 
 ---
 
 ## Sumário
 
-- [Fluxo e telas](#fluxo-e-telas)
-- [Tecnologias](#tecnologias)
-- [Estrutura do projeto](#estrutura-do-projeto)
-- [Como rodar localmente](#como-rodar-localmente)
-- [Publicação (GitHub Pages)](#publicação-github-pages)
-- [Segurança](#segurança)
+- [O case](#o-case)
+  - [Contexto e problema](#contexto-e-problema)
+  - [Objetivo](#objetivo)
+  - [Decisões de design](#decisões-de-design)
+  - [A marca fictícia](#a-marca-fictícia)
+  - [Revisitando o case](#revisitando-o-case)
+- [A jornada, tela a tela](#a-jornada-tela-a-tela)
+- [O que funciona no protótipo](#o-que-funciona-no-protótipo)
 - [Acessibilidade](#acessibilidade)
-- [Limitações conhecidas](#limitações-conhecidas)
+- [Tecnologias e arquitetura](#tecnologias-e-arquitetura)
+- [Como rodar localmente](#como-rodar-localmente)
+- [Publicação no GitHub Pages](#publicação-no-github-pages)
+- [Segurança e privacidade](#segurança-e-privacidade)
+- [Limitações](#limitações)
 - [Próximos passos](#próximos-passos)
-- [Histórico de mudanças](#histórico-de-mudanças)
+- [Histórico](#histórico)
 - [Autor](#autor)
 
 ---
 
-## Fluxo e telas
+## O case
+
+### Contexto e problema
+
+Para contratar ou renovar um seguro de automóvel ou residencial, a seguradora precisa
+conferir o estado do bem. No modelo tradicional, isso é uma **vistoria presencial**: o
+cliente agenda um horário, espera um vistoriador ou leva o carro até um posto, e só depois
+a análise começa. Para o cliente, é tempo perdido. Para a seguradora, é custo de
+deslocamento e uma etapa que atrasa a emissão da apólice.
+
+### Objetivo
+
+Criar uma **autovistoria**: o próprio segurado faz a vistoria pelo celular, no horário que
+quiser, informando alguns dados e tirando as fotos pedidas. O protótipo serviu para validar
+a jornada, a interface e as interações com usuários e stakeholders antes do
+desenvolvimento do produto real.
+
+### Decisões de design
+
+| Decisão | Por quê |
+| --- | --- |
+| **Uma jornada para dois produtos** | Automóvel e residência seguem o mesmo esqueleto (seus dados, dados do bem, fotos). Quem aprende um fluxo já sabe usar o outro, e o time mantém um único padrão. |
+| **Etapas curtas com progresso visível** | Dividir em 3 etapas reduz a sensação de formulário longo. O indicador mostra onde a pessoa está e permite voltar a qualquer etapa já visitada. |
+| **Foto com imagem de referência** | Cada pedido de foto mostra um exemplo do enquadramento esperado. Isso reduz fotos inúteis e retrabalho na análise. |
+| **Feito para o celular** | Botões grandes, teclado certo para cada campo (`inputmode`), câmera ou galeria direto do botão de foto e layout que funciona a partir de 320 px. |
+| **Progresso salvo** | Se a pessoa sair no meio, ao voltar o fluxo continua de onde parou, e a home mostra o status de cada vistoria. |
+| **Erros que ajudam** | As mensagens dizem o que fazer ("Coloque o celular com DDD, assim: (11) 91234-5678"), aparecem no campo e num resumo com links. |
+| **Linguagem próxima** | Textos curtos, em tom de conversa ("É rapidinho", "Falta pouco!"), sem jargão de seguradora. |
+| **Acessível desde o início** | Seguro é um serviço essencial: a vistoria precisa funcionar com teclado, leitor de tela, zoom e alto contraste. |
+
+### A marca fictícia
+
+<img src="img/favicon.svg" alt="Símbolo da Lar&Via Seguros: um carro sob um telhado" width="56" align="left">
+
+**Lar&Via Seguros** representa a empresa onde o projeto nasceu. O nome junta **lar** (a
+casa) e **via** (o carro), os dois produtos da autovistoria. O símbolo é um carro
+protegido sob um telhado, e também é o favicon do site.
+
+<br clear="left">
+
+### Revisitando o case
+
+Em 2026 o protótipo foi revisitado para refletir o que eu faria hoje:
+
+- **Visual novo**: design system próprio em CSS, com tema claro de cores suaves, login
+  escuro, cards com foto e ícones em SVG.
+- **Fluxos que funcionam de verdade**: validação, máscaras, upload com pré-visualização,
+  rascunho automático, confirmação e protocolo.
+- **Acessibilidade revisada** para a WCAG 2.2 AA e auditada com axe-core.
+- **Zero dependências**: saíram jQuery, Bootstrap, Popper e o datetimepicker. Ficou só
+  HTML, CSS e JavaScript.
+- **Segurança**: Content Security Policy sem `'unsafe-inline'` e nenhum dado enviado a servidor.
+
+---
+
+## A jornada, tela a tela
 
 ```
 index.html ──► login.html ──► home.html ─┬─► vistoria-automovel.html
-                (CPF)        (escolha)   └─► vistoria-residencial.html
+                 (CPF)       (escolha)    └─► vistoria-residencial.html
 ```
 
-| Tela | Arquivo | O que faz |
+| Tela | O que acontece |
+| --- | --- |
+| **Login** (`login.html`) | A pessoa digita o CPF do titular. O campo formata sozinho e valida os dígitos verificadores. Um botão preenche um CPF de exemplo. |
+| **Início** (`home.html`) | Dois cards, automóvel e residência, mostram o status de cada vistoria: *não iniciada*, *em andamento* (com a etapa) ou *enviada* (com o protocolo). Abaixo, "Como funciona" e dicas para as fotos. |
+| **Vistoria de automóvel** (`vistoria-automovel.html`) | 1. **Dados pessoais**: identificação e endereço. 2. **Dados do veículo**: CRLV, CNH e recibo, placa, Renavam, chassi, características e equipamentos. 3. **Fotos**: 8 fotos (laterais, porta-malas, painel, motor e chassi). |
+| **Vistoria residencial** (`vistoria-residencial.html`) | 1. **Dados pessoais**. 2. **Dados da residência**: endereço, tipo de imóvel e quantidade de cômodos. 3. **Fotos**: sala, quarto, cozinha e banheiro. |
+
+Ao finalizar, uma janela pede confirmação e, em seguida, aparece a tela de sucesso com o
+número de protocolo.
+
+| Login | Dados pessoais |
+| --- | --- |
+| ![Tela de login escura com a marca Lar&Via Seguros](docs/screenshots/login.jpg) | ![Etapa de dados pessoais da vistoria de automóvel](docs/screenshots/vistoria-automovel.jpg) |
+
+| Etapa de fotos | Celular |
+| --- | --- |
+| ![Etapa de fotos com progresso de 5 de 8 fotos](docs/screenshots/vistoria-fotos.jpg) | ![Vistoria residencial no celular](docs/screenshots/mobile-residencial.jpg) |
+
+---
+
+## O que funciona no protótipo
+
+- **Etapas** com estados *atual*, *concluída* e *não iniciada*. Dá para voltar a qualquer etapa já visitada.
+- **Validação por etapa**, com mensagem em cada campo e um resumo de erros com links. O resumo se atualiza conforme os itens são corrigidos.
+- **Regras de validação**: CPF (dígitos verificadores), e-mail, celular com DDD, CEP, idade mínima de 18 anos, placa (Mercosul ou antiga), chassi (17 caracteres, sem I, O e Q), Renavam, anos de fabricação e modelo, e números dentro de um intervalo.
+- **Máscaras** de CPF, telefone, CEP, placa, chassi e quilometragem.
+- **Upload** de documentos (imagem ou PDF) e fotos, com pré-visualização local, troca, remoção, barra de progresso e validação de tipo e tamanho (até 10 MB).
+- **Rascunho automático**: recarregou a página ou voltou à home? O fluxo continua de onde parou.
+- **Confirmação** em `<dialog>` nativo e **tela de sucesso** com protocolo.
+- **Responsivo**, com animações suaves que respeitam a preferência por menos movimento.
+
+> Para testar rápido: no login, use o botão **Usar um CPF de exemplo**. Na etapa de fotos,
+> qualquer imagem do seu computador ou celular serve.
+
+---
+
+## Acessibilidade
+
+O protótipo segue a **WCAG 2.2 nível AA**. Todas as telas e estados (erros, diálogo,
+sucesso e celular) foram auditados com [axe-core](https://github.com/dequelabs/axe-core),
+sem violações.
+
+- **Estrutura**: `lang="pt-BR"`, link "Pular para o conteúdo", landmarks (`header`, `nav`, `main`, `footer`), um `h1` por página e hierarquia de títulos correta. A página atual do menu usa `aria-current="page"`.
+- **Formulários**: rótulos visíveis ligados aos campos, dicas com `aria-describedby` e campos obrigatórios com `required`. O asterisco é explicado no topo do formulário. Os campos usam `autocomplete` e `inputmode`.
+- **Erros**: cada campo mostra a própria mensagem (`aria-invalid` + `aria-describedby`). O resumo de erros recebe o foco e tem links para cada campo. Grupos usam `fieldset` e `legend`.
+- **Etapas**: o indicador usa `aria-current="step"` e informa o estado de cada etapa. Ao trocar de etapa, o foco vai para o título e o título da aba muda ("Etapa 2 de 3: Dados do veículo").
+- **Uploads**: campos `input type="file"` nativos, com nome acessível por foto ("Enviar foto Dianteira esquerda") e progresso anunciado ("3 de 8 fotos enviadas").
+- **Diálogo**: `<dialog>` nativo com `showModal()`. O foco fica preso no diálogo, Esc fecha e o foco volta ao botão que o abriu.
+- **Anúncios**: uma região `aria-live` informa ações que não movem o foco, como foto adicionada ou arquivo inválido.
+- **Visual**: contraste mínimo de 4,5:1 no texto e 3:1 nas bordas dos campos, foco sempre visível e alvos de toque com pelo menos 24 px. Não há rolagem horizontal a 320 px. O CSS respeita `prefers-reduced-motion` e `forced-colors` (alto contraste do Windows).
+
+---
+
+## Tecnologias e arquitetura
+
+| Camada | Tecnologia | Uso |
 | --- | --- | --- |
-| Login | `login.html` | Pede o CPF, com máscara e validação dos dígitos verificadores. Não há autenticação real. |
-| Início | `home.html` | Mostra dois cards, um para cada tipo de vistoria: automóvel e residência. |
-| Vistoria automóvel | `vistoria-automovel.html` | Tem 3 etapas: **Dados pessoais** (com upload do recibo), **Dados do veículo** (documentos, informações básicas, equipamentos) e **Vistoria** (8 fotos do veículo). |
-| Vistoria residencial | `vistoria-residencial.html` | Tem 3 etapas: **Dados pessoais**, **Dados da residência** (endereço, quantidade de cômodos) e **Vistoria** (fotos de sala, quarto, cozinha e banheiro). |
+| Marcação | HTML5 | Páginas estáticas, sem build. `<dialog>` e `<input type="date">` nativos. |
+| Estilo | CSS3, sem framework | `css/app.css`: tokens de cor, tipografia e espaçamento, grid e componentes. O login redefine os tokens para a versão escura. |
+| Comportamento | JavaScript puro | Um arquivo por tela, sem jQuery nem Bootstrap. |
+| Ícones | Sprite SVG próprio | `img/icons.svg`, com ícones de traço que herdam a cor do texto. |
+| Tipografia | Montserrat e Open Sans | Google Fonts, com fallback para as fontes do sistema. |
+| Qualidade | HTMLHint + GitHub Actions | Valida o HTML e barra scripts e estilos inline. |
+| Deploy | GitHub Pages via Actions | Publica a cada push na `master`. |
 
-| Login | Início |
-| --- | --- |
-| ![Login](docs/screenshots/login.jpg) | ![Início](docs/screenshots/home.jpg) |
-
-| Etapa de fotos | Mobile |
-| --- | --- |
-| ![Etapa de fotos](docs/screenshots/vistoria-fotos.jpg) | ![Mobile](docs/screenshots/mobile-residencial.jpg) |
-
-**Interações prototipadas**
-
-- Indicador de etapas com estados *ativa* e *visitada*, botões **Próximo** e **Anterior** e animação de transição entre telas.
-- Campos com *floating label*.
-- Máscaras de CPF e de data (`dd/mm/aaaa`), além de um datepicker em pt-BR.
-- Upload de fotos com pré-visualização local nos cards da galeria.
-- Seleção múltipla de equipamentos do veículo, com itens adicionados e removidos.
-- Modal de confirmação ("Tem certeza que deseja enviar a vistoria?").
-- Layout responsivo, com navbar off-canvas e menu hambúrguer animado no mobile.
-
----
-
-## Tecnologias
-
-| Camada | Tecnologia | Versão | Uso |
-| --- | --- | --- | --- |
-| Marcação | HTML5 | — | Páginas estáticas, sem build |
-| Estilo | CSS3 | — | `css/estilo.css` (tema, animações, responsividade) |
-| Framework UI | [Bootstrap](https://getbootstrap.com/docs/4.6/) | 4.6.2 | Grid, navbar, tabs e modal |
-| JS | [jQuery](https://jquery.com/) | 3.7.1 | Manipulação do DOM e eventos |
-| JS | [Popper.js](https://popper.js.org/) | 1.16.1 | Posicionamento de tooltips e popovers (exigido pelo Bootstrap 4) |
-| Componente | [bootstrap-datetimepicker](https://github.com/smalot/bootstrap-datetimepicker) (smalot) | 2.x | Seletor de datas em pt-BR |
-| Ícones | Fonte de ícones própria (`css/bradseg_icons.css`) | — | Ícones de calendário, lixeira etc. |
-| Tipografia | Montserrat e Open Sans | — | Google Fonts, com fallback local em `fonts/` |
-| Qualidade | [HTMLHint](https://htmlhint.com/) + GitHub Actions | 1.x | Validação de HTML e bloqueio de scripts inline no CI |
-| Deploy | GitHub Pages (via Actions) | — | Hospedagem do protótipo |
-
-As bibliotecas ficam **versionadas no próprio repositório** (`css/` e `js/`). Assim o
-protótipo abre direto no navegador, sem `npm install` nem CDN.
-
----
-
-## Estrutura do projeto
+O projeto **não tem dependências de runtime**: abre direto no navegador, sem `npm install`.
 
 ```
 .
 ├── index.html                  # Redireciona para o login
-├── login.html                  # Tela de login (CPF)
-├── home.html                   # Escolha do tipo de vistoria
+├── login.html                  # Login (CPF)
+├── home.html                   # Escolha do tipo de vistoria e status
 ├── vistoria-automovel.html     # Fluxo de vistoria de automóvel
 ├── vistoria-residencial.html   # Fluxo de vistoria residencial
 ├── css/
-│   ├── estilo.css              # Estilos do protótipo
-│   ├── bootstrap.min.css       # Bootstrap 4.6.2
-│   ├── docs.min.css            # Estilos auxiliares do Bootstrap docs
-│   ├── bradseg_icons.css       # Fonte de ícones
-│   └── bootstrap-datetimepicker.min.css
+│   └── app.css                 # Design system do protótipo
 ├── js/
-│   ├── app.js                  # Comportamentos comuns (menu off-canvas)
-│   ├── login.js                # Máscara/validação de CPF e navegação
-│   ├── vistoria.js             # Etapas, upload, datas e modal
-│   ├── script.js               # Componentes de seleção múltipla
-│   ├── jquery-3.7.1.min.js
-│   ├── popper.min.js
-│   ├── bootstrap.min.js
-│   ├── bootstrap-datetimepicker.js
-│   └── locales/bootstrap-datetimepicker.pt-BR.js
-├── fonts/                      # Fontes locais e fonte de ícones
-├── img/                        # Imagens, ícones e fotos de referência
+│   ├── common.js               # Sessão (sessionStorage), anúncios, avisos e "Sair"
+│   ├── login.js                # Máscara e validação de CPF
+│   ├── home.js                 # Status de cada vistoria nos cards
+│   └── vistoria.js             # Etapas, validação, máscaras, uploads, rascunho e envio
+├── img/                        # Símbolo da marca, ícones e fotos de referência
 ├── docs/screenshots/           # Capturas usadas neste README
 └── .github/
     ├── workflows/ci.yml        # Validação de HTML
@@ -117,31 +199,34 @@ protótipo abre direto no navegador, sem `npm install` nem CDN.
     └── dependabot.yml          # Atualização das GitHub Actions
 ```
 
+**Como o fluxo funciona por dentro.** `js/vistoria.js` lê a estrutura do HTML: cada
+`<section class="step">` é uma etapa, e cada campo declara suas regras por atributos
+(`required`, `data-mask="cpf"`, `data-validate="placa"`, `data-min`/`data-max`). Assim,
+para criar um campo novo basta escrever o HTML, sem mexer no JavaScript. O rascunho e o
+status ficam no `sessionStorage`, com as chaves `av:rascunho:<fluxo>` e `av:status:<fluxo>`.
+
 ---
 
 ## Como rodar localmente
 
-Como o projeto é estático, basta servir a pasta com qualquer servidor HTTP. Prefira um
-servidor ao `file://`, porque a CSP e alguns navegadores se comportam de forma diferente
-com arquivos locais.
+O projeto é estático: basta servir a pasta com qualquer servidor HTTP. Prefira um servidor
+ao `file://`, porque a CSP e o sprite de ícones se comportam de forma diferente com
+arquivos locais.
 
 ```bash
 git clone https://github.com/fernandopinhel/prototipo-auto-vistoria.git
 cd prototipo-auto-vistoria
 
-# Opção 1 — Python
+# Opção 1: Python
 python3 -m http.server 8080
 
-# Opção 2 — Node
+# Opção 2: Node
 npx serve .
 ```
 
-Depois acesse <http://localhost:8080>.
+Depois, acesse <http://localhost:8080>.
 
-> No login, use qualquer **CPF válido** (por exemplo `529.982.247-25`). O CPF serve só
-> para a validação e não sai do navegador.
-
-**Validar o HTML** (o mesmo check que roda no CI):
+Para validar o HTML (o mesmo check do CI):
 
 ```bash
 npx htmlhint@1 "*.html"
@@ -149,98 +234,75 @@ npx htmlhint@1 "*.html"
 
 ---
 
-## Publicação (GitHub Pages)
+## Publicação no GitHub Pages
 
-O workflow `.github/workflows/pages.yml` publica o site a cada push na `master`.
-Para ativar:
+O workflow `.github/workflows/pages.yml` publica o site a cada push na `master`. Para ativar:
 
 1. No GitHub, abra **Settings → Pages**.
 2. Em **Build and deployment → Source**, escolha **GitHub Actions**.
-3. Faça um push na `master`, ou rode o workflow manualmente em **Actions → Deploy GitHub Pages**.
+3. Faça um push na `master` ou rode o workflow em **Actions → Deploy GitHub Pages**.
 
-O endereço será `https://fernandopinhel.github.io/prototipo-auto-vistoria/`.
+O endereço será <https://fernandopinhel.github.io/prototipo-auto-vistoria/>.
 
 ---
 
-## Segurança
+## Segurança e privacidade
 
-Mesmo sendo um protótipo público, o projeto adota boas práticas de front-end:
-
-- **Bibliotecas sem vulnerabilidades conhecidas**: jQuery saiu da 3.3.1 para a 3.7.1
-  (corrige CVE-2019-11358, CVE-2020-11022 e CVE-2020-11023) e Bootstrap saiu da 4.2.1
-  para a 4.6.2 (corrige o XSS em tooltip/popover, CVE-2019-8331).
-- **Content Security Policy** em todas as páginas: `script-src 'self'`, `object-src 'none'`,
-  `base-uri 'self'` e `form-action 'self'`. Origens externas liberadas apenas para Google Fonts.
-- **Sem JavaScript inline**: todos os `onclick`, `onchange` e `<script>` inline foram
-  movidos para `js/`. O CI barra regressões.
-- **Sem dependências de CDNs desativados**: os shims de IE8 do `oss.maxcdn.com` foram
-  removidos. Um domínio abandonado nesse papel poderia servir script malicioso.
-- **Dados não saem do navegador**: o login não envia o CPF nem o coloca na URL. Os
-  uploads só geram pré-visualização local e validam tipo (JPG, PNG, WEBP, HEIC) e
-  tamanho (até 10 MB).
-- **Sem injeção de HTML**: nomes de arquivo e textos dinâmicos são inseridos com
-  `textContent` e nós de texto, nunca com `innerHTML`.
+- **Nenhum dado sai do navegador.** Não há back-end. O rascunho fica no `sessionStorage` e é apagado ao fechar a aba, ao clicar em **Sair** e depois do envio. Fotos e documentos só geram pré-visualização local (`URL.createObjectURL`).
+- **Content Security Policy** em todas as páginas: `script-src 'self'`, `style-src` sem `'unsafe-inline'`, `object-src 'none'`, `base-uri 'self'` e `form-action 'self'`. Só o Google Fonts é liberado como origem externa.
+- **Sem JavaScript nem CSS inline.** O CI barra `<script>` inline, handlers `on*=` e atributos `style=`.
+- **Sem injeção de HTML.** Textos dinâmicos entram com `textContent`, nunca com `innerHTML`.
+- **Sem bibliotecas de terceiros no runtime**, o que reduz a superfície de ataque.
 - **Referrer Policy** `strict-origin-when-cross-origin` e `noindex` para buscadores.
 - **CI com permissões mínimas** (`contents: read`) e Dependabot para as Actions.
 
-Veja também o arquivo [SECURITY.md](SECURITY.md).
-
-> O GitHub Pages não permite definir cabeçalhos HTTP. Por isso a CSP vai em `<meta>`, e
-> `frame-ancestors`/`X-Frame-Options` não se aplicam. Em um servidor próprio, configure
-> esses cabeçalhos no servidor.
+O GitHub Pages não permite definir cabeçalhos HTTP, por isso a CSP vai em `<meta>` e
+`frame-ancestors` não se aplica. Veja também o [SECURITY.md](SECURITY.md).
 
 ---
 
-## Acessibilidade
+## Limitações
 
-- Cada campo tem `id` único com `<label for>` correspondente. Antes, todos usavam `for="text"`.
-- Os campos usam `inputmode` (numérico, telefone, e-mail) para abrir o teclado certo no mobile.
-- As imagens têm `alt`: descritivo nas que trazem informação e vazio nas decorativas.
-- Os botões de upload são focáveis (`role="button"`, `tabindex="0"`) e respondem a Enter e Espaço.
-- O menu mobile tem `aria-label` e `aria-expanded`.
-- O erro do login é anunciado por leitores de tela (`role="alert"`).
-
----
-
-## Limitações conhecidas
-
-- É um **protótipo**: não há back-end, persistência nem envio real da vistoria.
-- O nome e a foto do usuário ("Carolina Santos") são fixos, apenas para demonstração.
-- A tela inicial ainda tem estilos em evolução (efeito de hover dos cards).
-- Logotipos, fonte de ícones e fotos são **ativos de marca de terceiros**. Por isso o
-  repositório **não tem licença de código aberto**, e o conteúdo não deve ser reutilizado
-  sem autorização.
+- É um **protótipo**: não há back-end nem envio real da vistoria. O protocolo é gerado no navegador.
+- A usuária "Carolina Santos" e a foto dela são fixas, apenas para demonstração.
+- Fotos e documentos não entram no rascunho. Se a página recarregar, é preciso anexá-los de novo.
+- Arquivos HEIC são aceitos, mas só o Safari mostra a pré-visualização. Nos outros navegadores, o card continua com a imagem de referência.
+- A marca Lar&Via Seguros é fictícia. As fotos de veículos e cômodos vêm do projeto original e são de terceiros. Por isso o repositório **não tem licença de código aberto**, e as imagens não devem ser reutilizadas sem autorização.
 
 ---
 
 ## Próximos passos
 
-- [ ] Migrar para um bundler (Vite) e gerenciar dependências via npm, com Dependabot.
-- [ ] Atualizar para Bootstrap 5 e remover a dependência de jQuery.
-- [ ] Componentizar as telas (React ou Web Components) e eliminar a duplicação entre automóvel e residência.
-- [ ] Adicionar testes de fluxo (Playwright) e auditoria de acessibilidade (axe) no CI.
-- [ ] Integrar com uma API de vistoria (upload real, geolocalização e data/hora da foto).
+- [ ] Rodar os testes de fluxo (Playwright) e a auditoria de acessibilidade (axe) no CI.
+- [ ] Preencher o endereço a partir do CEP, avisando a pessoa de que o CEP será enviado a um serviço externo.
+- [ ] Componentizar o cabeçalho e os campos repetidos (Web Components ou um gerador estático).
+- [ ] Integrar com uma API de vistoria: upload real, geolocalização e data e hora da foto.
 
 ---
 
-## Histórico de mudanças
+## Histórico
 
-### 2026-10 — Atualização de segurança e manutenção
+### 2026-10: Case revisitado
 
-- Atualizações: jQuery 3.7.1, Bootstrap 4.6.2 e Popper 1.16.1.
-- Content Security Policy adicionada, scripts inline extraídos e shims de IE8 removidos.
-- Upload corrigido: os IDs eram duplicados e cada foto enviava um `POST` para
-  `#type your action here`. Agora o upload faz pré-visualização local, com validação.
-- Bug corrigido: um erro de sintaxe (`removeClass({"..."})`) quebrava parte dos scripts.
-- Acentuação corrigida na home: o arquivo estava em GB18030 e foi convertido para UTF-8.
-- Navegação ligada entre as telas: login → home → vistorias → sair.
-- Correções de HTML: tag `</span>` sem par e formulários aninhados.
-- Limpeza: cerca de 19 MB de Font Awesome que não era usado, `.DS_Store`, arquivos `._*`,
-  builds duplicados do Bootstrap, MDB, locales e fontes sem uso.
-- Novos arquivos: `.gitignore`, `.editorconfig`, CI de HTML, deploy no Pages, Dependabot,
-  `SECURITY.md` e este README.
+- Marca fictícia Lar&Via Seguros, com símbolo que une carro e casa, no lugar da marca da empresa original.
+- Visual novo, textos mais próximos e humanos, e home com o status de cada vistoria.
+- Fluxos funcionais: validação, máscaras, upload, rascunho, confirmação e protocolo.
+- Acessibilidade revisada para a WCAG 2.2 AA.
+- Saíram jQuery, Bootstrap, Popper, o datetimepicker, a fonte de ícones e o CSS antigo.
+- Correções de conteúdo: "Ano do veículo" usava um seletor de data, "Complemento" era obrigatório, "Combustível" e "Tipo de veículo" não tinham opções, e os cômodos ficavam na etapa de fotos.
+- Imagens otimizadas: o fundo do login caiu de 2,5 MB para cerca de 100 KB.
+- CSP mais restrita, sem `'unsafe-inline'` em `style-src`.
 
-### 2020-04 — Versão inicial
+### 2026-10: Segurança e manutenção
+
+- Bibliotecas atualizadas, CSP adicionada e scripts inline extraídos.
+- Upload corrigido (IDs duplicados e `POST` para `#type your action here`).
+- Correções de sintaxe, acentuação (GB18030 para UTF-8) e HTML.
+- Limpeza de cerca de 19 MB de arquivos sem uso. CI, deploy no Pages, Dependabot e `SECURITY.md` adicionados.
+
+### 2020-04: Versão inicial
+
+Protótipo original, criado na empresa onde o projeto nasceu.
 
 ---
 

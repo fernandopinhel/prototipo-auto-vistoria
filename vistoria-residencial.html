@@ -1,386 +1,337 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <head>
+<html lang="pt-BR">
+  <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description" content="Fluxo de autovistoria residencial.">
     <title>Vistoria residencial | Auto Vistoria</title>
-    <link rel="icon" type="image/png" href="img/icon-car.png">
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/docs.min.css">
-    <link rel="stylesheet" href="css/bradseg_icons.css">
-    <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
   </head>
-    <body>
-        <header class="vistoria residencial">
-          <!-- Navbar -->
-          <nav class="navbar navbar-expand-lg nav-mso display-desk">
-            <a class="navbar-brand mr-auto mr-lg-0" href="home.html" aria-label="Início"></a>
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" aria-label="Abrir menu" aria-expanded="false">
-              <!--span class="navbar-toggler-icon"></span-->
-              <div class="navbar-toggler-icon">
-                  <div class="bar1"></div>
-                  <div class="bar2"></div>
-                  <div class="bar3"></div>
-                </div>
-            </button>
-            <div class="navbar-collapse offcanvas-collapse">
-              <ul class="navbar-nav padding-nav mx-auto">
-                <li class="nav-item menu-principal">
-                  <a class="nav-link" href="vistoria-automovel.html">Vistoria automóvel</a>
-                </li>
-                <li class="nav-item menu-principal active">
-                  <a class="nav-link" href="vistoria-residencial.html">Vistoria residencial</a>
-                </li>
-              </ul>
-              <div class="nav-user">
-                  <a href="#">
-                    <img alt="Perfil do usuário" src="img/perfil-usuario.png">
-                  </a>
-              </div>
-              <ul class="navbar-nav ml-auto ml-auto-ajustes nav-responsive-none">
-                  <li class="nav-item">
-                    <span class="nav-link white padding-li-itens">Carolina Santos</span>
-                    <span><a class="nav-link yellow padding-li-itens" href="login.html">Sair</a></span>
-                  </li>
-                </ul>
-            </div>
-          </nav>
-          <!-- Navbar Responsiva -->
-          <nav class="navbar navbar-expand-lg nav-mso display-mobile">
-            <a class="navbar-brand mr-auto mr-lg-0" href="home.html" aria-label="Início"></a>
-            <div class="nav-user">
-              <a class="nav-link" href="vistoria-automovel.html">Automóvel</a>
-              <a class="nav-link active" href="vistoria-residencial.html">Residencial</a>
-            </div>
-            <div class="nav-sair float-right">
-              <a href="login.html">
-                <img alt="Sair" src="img/icon-sair.png">
-              </a>
-            </div>
-          </nav>
-        </header>
-        <section class="container design-process-section vistoria residencial">
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-            <ul class="nav nav-tabs process-model more-icon-preocess" role="tablist">
-                <li role="presentation" class="active">
-                  <a href="#dados-pessoais" aria-controls="dados-pessoais" role="tab" data-toggle="tab">
-                    <span class="border-active">
-                      <span>
-                        <img alt="" src="img/icon-dados-pessoais.png">
-                      </span>
-                    </span>
-                    <p>Dados pessoais</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#dados-veiculos" aria-controls="dados-veiculos" role="tab" data-toggle="tab">
-                    <span class="border-active">
-                      <span>
-                        <img alt="" src="img/icon-dados-veiculos.png">
-                      </span>
-                    </span>
-                    <p>Dados da residência</p>
-                  </a>
-                </li>
-                <li role="presentation">
-                  <a href="#vistoria" aria-controls="vistoria" role="tab" data-toggle="tab">
-                    <span class="border-active">
-                      <span>
-                        <img alt="" src="img/icon-vistoria.png">
-                      </span>
-                    </span>
-                    <p>Vistoria</p>
-                  </a>
-                </li>
-              </ul>
-
-            <div class="tab-content">
-              <!-- DADOS PESSOAIS -->
-              <div role="tabpanel" class="tab-pane active" id="dados-pessoais">
-                <div class="design-process-content bg-blank">
-                  <h4>Dados pessoais</h4>
-                  <form>
-
-                    <div class="row">
-                      <div class="col-12 col-sm-12 col-md-8">
-                        <div class="form">
-                          <input id="nome" type="text" name="nome" autocomplete="off" required>
-                          <label for="nome" class="label-name">
-                            <span class="content-name">Nome</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-5 col-md-4">
-                        <div class="form">
-                          <input id="cpf" type="text" name="cpf" autocomplete="off" required inputmode="numeric">
-                          <label for="cpf" class="label-name">
-                            <span class="content-name">CPF</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-7 col-md-4">
-                        <div class="form">
-                          <input id="e-mail" type="text" name="e-mail" autocomplete="off" required inputmode="email">
-                          <label for="e-mail" class="label-name">
-                            <span class="content-name">E-mail</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-3">
-                        <div class="form">
-                          <input id="telefone" type="text" name="telefone" autocomplete="off" required inputmode="tel">
-                          <label for="telefone" class="label-name">
-                            <span class="content-name">Telefone</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-5">
-                        <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
-                          <div class="form">
-                            <input id="data-de-nascimento" class="form-control date form_date input-date js-mask-date" inputmode="numeric" size="16" type="text" value="" maxlength="10" name="dtp_input1" placeholder=""  autocomplete="off" required>
-                            <label for="data-de-nascimento" class="label-name">
-                              <span class="content-name">
-                                <span class="icon-doc-calendario icones" aria-hidden="true"></span>
-                                <span>Data de nascimento</span>
-                              </span>
-                            </label>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="buttons-tab">
-                  <button type="button" name="button" class="btn btn-primary float-right next" role="tab" data-toggle="tab" aria-controls="negociacao">Próximo</button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <!-- DADOS VEÍCULO -->
-              <div role="tabpanel" class="tab-pane" id="dados-veiculos">
-                <div class="design-process-content bg-blank">
-                  <h4>Dados da residência</h4>
-
-                  <form>
-                    <div class="row">
-                      <div class="col-12 col-sm-3 col-md-2 col-lg-2">
-                        <div class="form">
-                          <input id="cep" type="text" name="cep" autocomplete="off" required inputmode="numeric">
-                          <label for="cep" class="label-name">
-                            <span class="content-name">CEP</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-9 col-md-8 col-lg-8">
-                        <div class="form">
-                          <input id="logradouro" type="text" name="logradouro" autocomplete="off" required>
-                          <label for="logradouro" class="label-name">
-                            <span class="content-name">Logradouro</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-2 col-md-2 col-lg-2">
-                        <div class="form">
-                          <input id="no" type="text" name="no" autocomplete="off" required>
-                          <label for="no" class="label-name">
-                            <span class="content-name">Nº</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-4 col-md-3 col-lg-2">
-                        <div class="form">
-                          <input id="complemento" type="text" name="complemento" autocomplete="off" required>
-                          <label for="complemento" class="label-name">
-                            <span class="content-name">Complemento</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-6 col-md-9 col-lg-4">
-                        <div class="form">
-                          <input id="bairro" type="text" name="bairro" autocomplete="off" required>
-                          <label for="bairro" class="label-name">
-                            <span class="content-name">Bairro</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-10 col-md-10 col-lg-4">
-                        <div class="form">
-                          <input id="cidade" type="text" name="cidade" autocomplete="off" required>
-                          <label for="cidade" class="label-name">
-                            <span class="content-name">Cidade</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-2 col-md-2 col-lg-2">
-                        <div class="form-select">
-                          <select class="form-control">
-                            <option>UF</option>
-                            <option>RJ</option>
-                            <option>SP</option>
-                            <option>MG</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <div class="buttons-tab">
-                  <button type="button" name="button" class="btn btn-second float-left prev">Anterior</button>
-                  <button type="button" name="button" class="btn btn-primary float-right next">Próximo</button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-              <!-- DETALHES DA VISTORIA -->
-              <div role="tabpanel" class="tab-pane" id="vistoria">
-                <div class="design-process-content bg-blank">
-                  <h4>Vistoria</h4>
-                  <form>
-                    <div class="row-sub">
-                      <h6>Quantidade de cômodos</h6>
-                    </div>
-
-                    <div class="row">
-                      <div class="col-12 col-sm-4">
-                        <div class="form">
-                          <input id="quarto" type="text" name="quarto" autocomplete="off" required>
-                          <label for="quarto" class="label-name">
-                            <span class="content-name">Quarto</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form">
-                          <input id="sala" type="text" name="sala" autocomplete="off" required>
-                          <label for="sala" class="label-name">
-                            <span class="content-name">Sala</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form">
-                          <input id="cozinha" type="text" name="cozinha" autocomplete="off" required>
-                          <label for="cozinha" class="label-name">
-                            <span class="content-name">Cozinha</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-4">
-                        <div class="form">
-                          <input id="banheiro" type="text" name="banheiro" autocomplete="off" required>
-                          <label for="banheiro" class="label-name">
-                            <span class="content-name">Banheiro</span>
-                          </label>
-                        </div>
-                      </div>
-                      <div class="col-12 col-sm-8">
-                        <div class="form">
-                          <input id="varanda-ou-quintal" type="text" name="varanda-ou-quintal" autocomplete="off" required>
-                          <label for="varanda-ou-quintal" class="label-name">
-                            <span class="content-name">Varanda ou quintal</span>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                  <div class="row gallery">
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                      <div class="animation active">
-                        <img alt="" src="img/sala.png">
-                        <img alt="" src="img/check.png" class="check">
-                        <h3>Sala</h3>
-                        <div class="upload-field">
-                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
-                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
-                         </div>
-                       </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                      <div class="animation">
-                        <img alt="" src="img/quarto.png">
-                        <h3>Quarto</h3>
-                        <div class="upload-field">
-                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
-                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
-                         </div>
-                       </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                      <div class="animation">
-                        <img alt="" src="img/banheiro.png">
-                        <h3>Banheiro</h3>
-                        <div class="upload-field">
-                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
-                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
-                         </div>
-                       </div>
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-4">
-                      <div class="animation">
-                        <img alt="" src="img/cozinha.png">
-                        <h3>Cozinha</h3>
-                        <div class="upload-field">
-                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
-                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
-                         </div>
-                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="buttons-tab">
-                  <button type="button" name="button" class="btn btn-second float-left prev">Anterior</button>
-                  <button type="button" name="button" class="btn btn-final float-right" data-toggle="modal" data-target="#finalizar-vistoria">Finalizar vistoria</button>
-                  <div class="clearfix"></div>
-                </div>
-              </div>
-            </div>
-
-        </section>
-
-        <div class="modal fade" id="finalizar-vistoria" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Finalizar vistoria</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                <div class="row">
-                  <div class="col-12">
-                    <p>Tem certeza que deseja enviar a vistoria?</p>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-cancelar" data-dismiss="modal">Não</button>
-                <button type="button" class="btn btn-final">Sim, pode enviar!</button>
-              </div>
-            </div>
-          </div>
+    <header class="topbar">
+      <div class="container topbar__inner">
+        <a class="topbar__brand" href="home.html">
+          <img class="brand__mark" src="img/favicon.svg" alt="" width="36" height="36">
+          <span class="brand__name">Lar&amp;Via <span class="brand__sub">Seguros</span></span>
+          <span class="topbar__product">Auto Vistoria</span>
+          <span class="visually-hidden">, ir para o início</span>
+        </a>
+        <nav class="mainnav" aria-label="Principal">
+          <ul>
+            <li><a href="home.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-grid"/></svg>Início</a></li>
+            <li><a href="vistoria-automovel.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-car"/></svg>Automóvel</a></li>
+            <li><a href="vistoria-residencial.html" aria-current="page"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-home"/></svg>Residência</a></li>
+          </ul>
+        </nav>
+        <div class="usermenu">
+          <img class="usermenu__avatar" src="img/perfil-usuario.png" alt="" width="40" height="40">
+          <span class="usermenu__name">Carolina Santos <small>Segurada</small></span>
+          <a class="usermenu__logout" href="login.html" data-logout>
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-logout"/></svg>Sair
+          </a>
         </div>
-        <!-- <footer>
-          <img alt="" src="img/logo-ebix.png" class="check">
-        </footer> -->
+      </div>
+    </header>
 
+    <main id="conteudo" tabindex="-1">
+      <div class="container container--narrow">
+        <a class="backlink" href="home.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-left"/></svg>Voltar ao início</a>
+        <div class="page-head">
+          <span class="eyebrow">Vistoria residencial</span>
+          <h1>Vistoria da sua residência</h1>
+          <p>Leva uns 8 minutinhos. Faça de dentro do imóvel, assim você já tira as fotos na hora.</p>
+        </div>
 
+        <div data-wizard-area>
+          <nav aria-label="Etapas da vistoria">
+            <ol class="stepper">
+              <li>
+                <button class="stepper__btn" type="button">
+                  <span class="stepper__dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  <span class="stepper__label">Dados pessoais</span><span class="visually-hidden" data-step-state></span>
+                </button>
+              </li>
+              <li>
+                <button class="stepper__btn" type="button" disabled>
+                  <span class="stepper__dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  <span class="stepper__label">Dados da residência</span><span class="visually-hidden" data-step-state></span>
+                </button>
+              </li>
+              <li>
+                <button class="stepper__btn" type="button" disabled>
+                  <span class="stepper__dot"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  <span class="stepper__label">Fotos</span><span class="visually-hidden" data-step-state></span>
+                </button>
+              </li>
+            </ol>
+          </nav>
 
+          <form class="card wizard" id="wizard" data-fluxo="residencial" data-nome-fluxo="Vistoria residencial" novalidate>
+            <p class="hint">Campos marcados com <span class="req">*</span> são obrigatórios.</p>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/bootstrap-datetimepicker.js"></script>
-    <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+            <div class="error-summary" tabindex="-1" hidden>
+              <h3><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-alert"/></svg><span>Corrija os itens para continuar</span></h3>
+              <ul></ul>
+            </div>
+
+            <section class="step" data-step="0" aria-labelledby="etapa-1-titulo">
+              <div class="step__head">
+                <span class="step__count">Etapa 1 de 3</span>
+                <h2 id="etapa-1-titulo" tabindex="-1">Dados pessoais</h2>
+                <p>Vamos começar por você. Confira os dados de quem é titular do seguro.</p>
+              </div>
+              <fieldset class="form-section">
+                <legend>Identificação</legend>
+                <div class="form-grid">
+                  <div class="field span-8">
+                    <label for="nome">Nome completo <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="nome" name="nome" type="text" autocomplete="name" data-validate="nome" required>
+                  </div>
+                  <div class="field span-4">
+                    <label for="cpf">CPF <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="cpf" name="cpf" type="text" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off" maxlength="14" data-mask="cpf" data-validate="cpf" required>
+                  </div>
+                  <div class="field span-7">
+                    <label for="email">E-mail <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="email" name="email" type="email" placeholder="nome@exemplo.com" autocomplete="email" data-validate="email" required>
+                  </div>
+                  <div class="field span-5">
+                    <label for="telefone">Celular <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="telefone" name="telefone" type="tel" placeholder="(11) 91234-5678" inputmode="tel" autocomplete="tel-national" maxlength="15" data-mask="telefone" data-validate="telefone" required>
+                  </div>
+                  <div class="field span-5">
+                    <label for="nascimento">Data de nascimento <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="nascimento" name="nascimento" type="date" autocomplete="bday" min="1900-01-01" data-validate="nascimento" required>
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+
+            <section class="step" data-step="1" aria-labelledby="etapa-2-titulo" hidden>
+              <div class="step__head">
+                <span class="step__count">Etapa 2 de 3</span>
+                <h2 id="etapa-2-titulo" tabindex="-1">Dados da residência</h2>
+                <p>Agora conte um pouco sobre o imóvel que vai ser segurado.</p>
+              </div>
+              <fieldset class="form-section">
+                <legend>Endereço do imóvel</legend>
+                <div class="form-grid">
+                  <div class="field span-4">
+                    <label for="cep">CEP <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="cep" name="cep" type="text" placeholder="00000-000" inputmode="numeric" autocomplete="postal-code" maxlength="9" data-mask="cep" data-validate="cep" required>
+                  </div>
+                  <div class="field span-8">
+                    <label for="logradouro">Rua, avenida… <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="logradouro" name="logradouro" type="text" autocomplete="address-line1" required>
+                  </div>
+                  <div class="field span-3">
+                    <label for="numero">Número <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="numero" name="numero" type="text" autocomplete="off" maxlength="10" required>
+                  </div>
+                  <div class="field span-4">
+                    <label for="complemento">Complemento <span class="opt">(opcional)</span></label>
+                    <p class="hint" id="complemento-dica">Apartamento, bloco, casa…</p>
+                    <input class="input" id="complemento" name="complemento" type="text" autocomplete="address-line2" aria-describedby="complemento-dica">
+                  </div>
+                  <div class="field span-5">
+                    <label for="bairro">Bairro <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="bairro" name="bairro" type="text" autocomplete="address-level3" required>
+                  </div>
+                  <div class="field span-8">
+                    <label for="cidade">Cidade <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="cidade" name="cidade" type="text" autocomplete="address-level2" required>
+                  </div>
+                  <div class="field span-4">
+                    <label for="uf">Estado <span class="req" aria-hidden="true">*</span></label>
+                    <select class="select" id="uf" name="uf" autocomplete="address-level1" required><option value="">Selecione</option><option value="AC">Acre (AC)</option><option value="AL">Alagoas (AL)</option><option value="AP">Amapá (AP)</option><option value="AM">Amazonas (AM)</option><option value="BA">Bahia (BA)</option><option value="CE">Ceará (CE)</option><option value="DF">Distrito Federal (DF)</option><option value="ES">Espírito Santo (ES)</option><option value="GO">Goiás (GO)</option><option value="MA">Maranhão (MA)</option><option value="MT">Mato Grosso (MT)</option><option value="MS">Mato Grosso do Sul (MS)</option><option value="MG">Minas Gerais (MG)</option><option value="PA">Pará (PA)</option><option value="PB">Paraíba (PB)</option><option value="PR">Paraná (PR)</option><option value="PE">Pernambuco (PE)</option><option value="PI">Piauí (PI)</option><option value="RJ">Rio de Janeiro (RJ)</option><option value="RN">Rio Grande do Norte (RN)</option><option value="RS">Rio Grande do Sul (RS)</option><option value="RO">Rondônia (RO)</option><option value="RR">Roraima (RR)</option><option value="SC">Santa Catarina (SC)</option><option value="SP">São Paulo (SP)</option><option value="SE">Sergipe (SE)</option><option value="TO">Tocantins (TO)</option></select>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset class="form-section">
+                <legend>Tipo de imóvel <span class="req" aria-hidden="true">*</span></legend>
+                <div class="chips">
+                  <label class="chip"><input type="radio" id="tipo-imovel-0" name="tipo-imovel" value="casa" required><span><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg>Casa</span></label>
+                  <label class="chip"><input type="radio" id="tipo-imovel-1" name="tipo-imovel" value="casa-condominio" required><span><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg>Casa em condomínio</span></label>
+                  <label class="chip"><input type="radio" id="tipo-imovel-2" name="tipo-imovel" value="apartamento" required><span><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg>Apartamento</span></label>
+                </div>
+              </fieldset>
+              <fieldset class="form-section">
+                <legend>Quantidade de cômodos</legend>
+                <div class="form-grid">
+                  <div class="field span-3">
+                    <label for="quartos">Quartos <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="quartos" name="quartos" type="text" placeholder="0" inputmode="numeric" autocomplete="off" maxlength="2" data-mask="digitos" data-validate="intervalo" data-min="0" data-max="20" required>
+                  </div>
+                  <div class="field span-3">
+                    <label for="salas">Salas <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="salas" name="salas" type="text" placeholder="0" inputmode="numeric" autocomplete="off" maxlength="2" data-mask="digitos" data-validate="intervalo" data-min="0" data-max="20" required>
+                  </div>
+                  <div class="field span-3">
+                    <label for="cozinhas">Cozinhas <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="cozinhas" name="cozinhas" type="text" placeholder="1" inputmode="numeric" autocomplete="off" maxlength="2" data-mask="digitos" data-validate="intervalo" data-min="1" data-max="10" required>
+                  </div>
+                  <div class="field span-3">
+                    <label for="banheiros">Banheiros <span class="req" aria-hidden="true">*</span></label>
+                    <input class="input" id="banheiros" name="banheiros" type="text" placeholder="1" inputmode="numeric" autocomplete="off" maxlength="2" data-mask="digitos" data-validate="intervalo" data-min="1" data-max="20" required>
+                  </div>
+                  <div class="field span-6">
+                    <label for="varandas">Varandas ou quintais <span class="opt">(opcional)</span></label>
+                    <input class="input" id="varandas" name="varandas" type="text" placeholder="0" inputmode="numeric" autocomplete="off" maxlength="2" data-mask="digitos" data-validate="intervalo" data-min="0" data-max="10">
+                  </div>
+                  <div class="field span-6">
+                    <label for="area">Área construída (m²) <span class="opt">(opcional)</span></label>
+                    <input class="input" id="area" name="area" type="text" placeholder="Ex.: 85" inputmode="numeric" autocomplete="off" maxlength="5" data-mask="digitos" data-validate="intervalo" data-min="10" data-max="10000">
+                  </div>
+                </div>
+              </fieldset>
+            </section>
+
+            <section class="step" data-step="2" aria-labelledby="etapa-3-titulo" hidden>
+              <div class="step__head">
+                <span class="step__count">Etapa 3 de 3</span>
+                <h2 id="etapa-3-titulo" tabindex="-1">Fotos</h2>
+                <p>Falta pouco! Envie uma foto de cada cômodo, de preferência com as luzes acesas ou as cortinas abertas.</p>
+              </div>
+              <div class="callout">
+                <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-bulb"/></svg>
+                <p>Use a imagem de cada card como exemplo. No celular, o botão abre a câmera ou a galeria. Aceitamos JPG, PNG, WEBP ou HEIC de até 10 MB.</p>
+              </div>
+              <div class="photo-progress">
+                <div class="progressbar" aria-hidden="true"><span></span></div>
+                <strong data-photo-count>0 de 4 fotos</strong>
+              </div>
+              <ul class="photos" aria-label="Fotos solicitadas">
+                <li class="photo">
+                  <div class="photo__media">
+                    <img src="img/sala.png" alt="Referência: sala de estar com sofá e TV" width="230" height="230" loading="lazy">
+                    <span class="photo__ref" aria-hidden="true">Referência</span>
+                    <span class="photo__badge" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  </div>
+                  <div class="photo__body">
+                    <h3 class="photo__title" id="foto-sala-titulo">Sala</h3>
+                    <p class="photo__state" id="foto-sala-estado">Pendente</p>
+                    <div class="photo__actions">
+                      <label class="photo__pick">
+                        <input id="foto-sala" name="foto-sala" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-labelledby="foto-sala-acao foto-sala-titulo" aria-describedby="foto-sala-estado">
+                        <span class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-camera"/></svg><span id="foto-sala-acao">Enviar foto</span></span>
+                      </label>
+                      <button class="photo__remove" type="button" aria-label="Remover foto: Sala" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-trash"/></svg></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="photo">
+                  <div class="photo__media">
+                    <img src="img/quarto.png" alt="Referência: quarto com cama" width="230" height="230" loading="lazy">
+                    <span class="photo__ref" aria-hidden="true">Referência</span>
+                    <span class="photo__badge" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  </div>
+                  <div class="photo__body">
+                    <h3 class="photo__title" id="foto-quarto-titulo">Quarto</h3>
+                    <p class="photo__state" id="foto-quarto-estado">Pendente</p>
+                    <div class="photo__actions">
+                      <label class="photo__pick">
+                        <input id="foto-quarto" name="foto-quarto" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-labelledby="foto-quarto-acao foto-quarto-titulo" aria-describedby="foto-quarto-estado">
+                        <span class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-camera"/></svg><span id="foto-quarto-acao">Enviar foto</span></span>
+                      </label>
+                      <button class="photo__remove" type="button" aria-label="Remover foto: Quarto" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-trash"/></svg></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="photo">
+                  <div class="photo__media">
+                    <img src="img/cozinha.png" alt="Referência: cozinha com bancada e armários" width="230" height="230" loading="lazy">
+                    <span class="photo__ref" aria-hidden="true">Referência</span>
+                    <span class="photo__badge" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  </div>
+                  <div class="photo__body">
+                    <h3 class="photo__title" id="foto-cozinha-titulo">Cozinha</h3>
+                    <p class="photo__state" id="foto-cozinha-estado">Pendente</p>
+                    <div class="photo__actions">
+                      <label class="photo__pick">
+                        <input id="foto-cozinha" name="foto-cozinha" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-labelledby="foto-cozinha-acao foto-cozinha-titulo" aria-describedby="foto-cozinha-estado">
+                        <span class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-camera"/></svg><span id="foto-cozinha-acao">Enviar foto</span></span>
+                      </label>
+                      <button class="photo__remove" type="button" aria-label="Remover foto: Cozinha" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-trash"/></svg></button>
+                    </div>
+                  </div>
+                </li>
+                <li class="photo">
+                  <div class="photo__media">
+                    <img src="img/banheiro.png" alt="Referência: banheiro com pia e box" width="230" height="230" loading="lazy">
+                    <span class="photo__ref" aria-hidden="true">Referência</span>
+                    <span class="photo__badge" aria-hidden="true"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></span>
+                  </div>
+                  <div class="photo__body">
+                    <h3 class="photo__title" id="foto-banheiro-titulo">Banheiro</h3>
+                    <p class="photo__state" id="foto-banheiro-estado">Pendente</p>
+                    <div class="photo__actions">
+                      <label class="photo__pick">
+                        <input id="foto-banheiro" name="foto-banheiro" type="file" accept="image/jpeg,image/png,image/webp,image/heic,image/heif" aria-labelledby="foto-banheiro-acao foto-banheiro-titulo" aria-describedby="foto-banheiro-estado">
+                        <span class="btn btn--primary btn--sm"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-camera"/></svg><span id="foto-banheiro-acao">Enviar foto</span></span>
+                      </label>
+                      <button class="photo__remove" type="button" aria-label="Remover foto: Banheiro" hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-trash"/></svg></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+
+            <div class="wizard__actions">
+              <button class="btn" type="button" data-prev hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-left"/></svg>Anterior</button>
+              <button class="btn btn--primary btn--next" type="submit" data-next>Próximo<svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-right"/></svg></button>
+              <button class="btn btn--success btn--finish" type="submit" data-finish hidden><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-send"/></svg>Finalizar vistoria</button>
+            </div>
+            <p class="save-note"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-save"/></svg>Seu progresso fica salvo neste navegador até você sair. Se a página recarregar, só as fotos e os documentos precisam ser enviados de novo.</p>
+          </form>
+        </div>
+
+        <section class="card success" data-success hidden aria-labelledby="sucesso-titulo">
+          <div class="success__icon"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-check"/></svg></div>
+          <h2 id="sucesso-titulo" tabindex="-1">Prontinho, vistoria enviada!</h2>
+          <p>Recebemos seus dados e suas fotos. A análise leva até 2 dias úteis, e a gente avisa por e-mail assim que terminar.</p>
+          <p data-sent-at></p>
+          <div class="protocol">
+            <span>Seu número de protocolo</span>
+            <strong data-protocol>…</strong>
+          </div>
+          <div class="success__actions">
+            <a class="btn btn--primary" href="home.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-grid"/></svg>Voltar ao início</a>
+            <button class="btn" type="button" data-new>Fazer nova vistoria</button>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <dialog class="dialog" id="confirmar" aria-labelledby="confirmar-titulo" aria-describedby="confirmar-desc">
+      <div class="dialog__body">
+        <h2 id="confirmar-titulo">Tudo certo para enviar?</h2>
+        <p id="confirmar-desc"><span data-dialog-summary></span> Depois do envio, não dá mais para alterar nada.</p>
+      </div>
+      <div class="dialog__actions">
+        <button class="btn" type="button" data-dialog-cancel>Quero revisar</button>
+        <button class="btn btn--success" type="button" data-dialog-confirm><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-send"/></svg><span>Sim, enviar</span></button>
+      </div>
+    </dialog>
+
+    <footer class="footer">
+      <div class="container">
+        <span><strong>Case de UX/UI · 2020.</strong> Lar&amp;Via Seguros é uma marca fictícia que representa a empresa onde o projeto nasceu.</span>
+        <span>Seus dados ficam só neste navegador.</span>
+      </div>
+    </footer>
+
+    <script src="js/common.js"></script>
     <script src="js/vistoria.js"></script>
   </body>
 </html>

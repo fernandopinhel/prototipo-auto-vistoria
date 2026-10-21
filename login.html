@@ -1,38 +1,70 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description" content="Acesso ao protótipo Auto Vistoria.">
-    <title>Login | Auto Vistoria</title>
-    <link rel="icon" type="image/png" href="img/icon-car.png">
+    <meta name="theme-color" content="#0a1220">
+    <meta name="description" content="Case de UX/UI: autovistoria de automóvel e residência pelo celular, da marca fictícia Lar&amp;Via Seguros.">
+    <title>Entrar | Auto Vistoria</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&amp;family=Open+Sans:wght@400;600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/app.css">
   </head>
-  <body class="login">
-    <div>
-      <img alt="Auto Vistoria" src="img/logologin.png" class="center-block">
-      <form class="js-login-form" novalidate>
-        <div class="form">
-          <input id="login-cpf" type="text" autocomplete="off" inputmode="numeric" maxlength="14" required aria-describedby="login-erro">
-          <label for="login-cpf" class="label-name">
-            <span class="content-name">CPF</span>
-          </label>
-        </div>
-        <p id="login-erro" class="login-erro" role="alert" hidden>Informe um CPF válido.</p>
+  <body>
+    <a class="skip-link" href="#login-form">Pular para o formulário de acesso</a>
 
-        <button type="submit">Entrar</button>
-      </form>
+    <div class="login">
+      <aside class="login__media" aria-label="Sobre o Auto Vistoria">
+        <div class="login__top">
+          <span class="brand brand--light">
+            <img class="brand__mark" src="img/favicon.svg" alt="" width="40" height="40">
+            <span class="brand__name">Lar&amp;Via <span class="brand__sub">Seguros</span></span>
+          </span>
+          <span class="case-tag">Case de UX/UI · 2020</span>
+        </div>
+        <h2>Sua vistoria, no seu tempo.</h2>
+        <p>Faça a vistoria do seu carro ou da sua casa pelo celular, em poucos minutos e sem precisar marcar visita.</p>
+        <ul class="login__highlights">
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-clock"/></svg> Cerca de 10 minutos</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-phone"/></svg> Feito para celular</li>
+          <li><svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-shield"/></svg> Dados protegidos</li>
+        </ul>
+      </aside>
+
+      <main class="login__panel" id="conteudo">
+        <form class="login__form" id="login-form" novalidate>
+          <span class="eyebrow">Auto Vistoria</span>
+          <h1>Acesse sua vistoria</h1>
+          <p>Para começar, digite o CPF de quem é titular do seguro.</p>
+
+          <div class="field">
+            <label for="login-cpf">CPF <span class="req" aria-hidden="true">*</span></label>
+            <p class="hint" id="login-cpf-dica">Pode digitar só os números, a gente formata para você.</p>
+            <input class="input" id="login-cpf" name="cpf" type="text" inputmode="numeric" autocomplete="off"
+                   maxlength="14" required aria-describedby="login-cpf-dica login-cpf-erro">
+            <p class="field-error" id="login-cpf-erro" hidden></p>
+          </div>
+
+          <button class="btn btn--primary btn--block login__submit" type="submit">
+            Entrar
+            <svg class="icon" aria-hidden="true" focusable="false"><use href="img/icons.svg#i-arrow-right"/></svg>
+          </button>
+
+          <div class="login__demo">
+            <p><strong>Este é um case de portfólio.</strong> Não existe login de verdade e o CPF não sai do seu navegador. Lar&amp;Via Seguros é uma marca fictícia.</p>
+            <button class="btn btn--ghost btn--sm" type="button" id="login-demo">Usar um CPF de exemplo</button>
+          </div>
+        </form>
+      </main>
     </div>
 
-    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
     <script src="js/login.js"></script>
   </body>
 </html>
