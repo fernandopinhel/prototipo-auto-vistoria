@@ -1,39 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
-        <!-- Meta tags Obrigatórias -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Fluxo de autovistoria de automóvel.">
+    <title>Vistoria automóvel | Auto Vistoria</title>
+    <link rel="icon" type="image/png" href="img/icon-car.png">
 
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link href="css/docs.min.css" rel="stylesheet">
-        <link href="css/bradseg_icons.css" rel="stylesheet">
-
-        <!-- Estilo CSS -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="css/estilo.css">
-
-        <!-- Datepicker -->
-        <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
-
-        <!-- Icons fontawesome -->
-        <link href="libs/fontawesome-free-5.9.0-web/css/fontawesome.css" rel="stylesheet">
-        <link href="libs/fontawesome-free-5.9.0-web/css/brands.css" rel="stylesheet">
-        <link href="libs/fontawesome-free-5.9.0-web/css/solid.css" rel="stylesheet">
-
-        <title>Auto Vistoria</title>
-    </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/docs.min.css">
+    <link rel="stylesheet" href="css/bradseg_icons.css">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
+  </head>
     <body>
         <header class="vistoria automovel">
           <!-- Navbar -->
           <nav class="navbar navbar-expand-lg nav-mso display-desk">
-            <a class="navbar-brand mr-auto mr-lg-0" href="#"></a>
-            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas">
+            <a class="navbar-brand mr-auto mr-lg-0" href="home.html" aria-label="Início"></a>
+            <button class="navbar-toggler p-0 border-0" type="button" data-toggle="offcanvas" aria-label="Abrir menu" aria-expanded="false">
               <!--span class="navbar-toggler-icon"></span-->
-              <div class="navbar-toggler-icon" onclick="toggleFunction(this)">
+              <div class="navbar-toggler-icon">
                   <div class="bar1"></div>
                   <div class="bar2"></div>
                   <div class="bar3"></div>
@@ -42,35 +35,35 @@
             <div class="navbar-collapse offcanvas-collapse">
               <ul class="navbar-nav padding-nav mx-auto">
                 <li class="nav-item menu-principal active">
-                  <a class="nav-link" href="#">Vistoria automóvel</a>
+                  <a class="nav-link" href="vistoria-automovel.html">Vistoria automóvel</a>
                 </li>
                 <li class="nav-item menu-principal">
-                  <a class="nav-link" href="#">Vistoria residencial</a>
+                  <a class="nav-link" href="vistoria-residencial.html">Vistoria residencial</a>
                 </li>
               </ul>
               <div class="nav-user">
                   <a href="#">
-                    <img src="img/perfil-usuario.png">
+                    <img alt="Perfil do usuário" src="img/perfil-usuario.png">
                   </a>
               </div>
               <ul class="navbar-nav ml-auto ml-auto-ajustes nav-responsive-none">
                   <li class="nav-item">
-                    <span class="nav-link white padding-li-itens" href="#">Carolina Santos</span>
-                    <span><a class="nav-link yellow padding-li-itens" href="#">Sair</a></span>
+                    <span class="nav-link white padding-li-itens">Carolina Santos</span>
+                    <span><a class="nav-link yellow padding-li-itens" href="login.html">Sair</a></span>
                   </li>
                 </ul>
             </div>
           </nav>
           <!-- Navbar Responsiva -->
           <nav class="navbar navbar-expand-lg nav-mso display-mobile">
-            <a class="navbar-brand mr-auto mr-lg-0" href="#"></a>
+            <a class="navbar-brand mr-auto mr-lg-0" href="home.html" aria-label="Início"></a>
             <div class="nav-user">
-              <a class="nav-link active" href="#">Automóvel</a>
-              <a class="nav-link" href="#">Residencial</a>
+              <a class="nav-link active" href="vistoria-automovel.html">Automóvel</a>
+              <a class="nav-link" href="vistoria-residencial.html">Residencial</a>
             </div>
             <div class="nav-sair float-right">
-              <a href="#">
-                <img src="img/icon-sair.png">
+              <a href="login.html">
+                <img alt="Sair" src="img/icon-sair.png">
               </a>
             </div>
           </nav>
@@ -82,7 +75,7 @@
                   <a href="#dados-pessoais" aria-controls="dados-pessoais" role="tab" data-toggle="tab">
                     <span class="border-active">
                       <span>
-                        <img src="img/icon-dados-pessoais.png">
+                        <img alt="" src="img/icon-dados-pessoais.png">
                       </span>
                     </span>
                     <p>Dados pessoais</p>
@@ -92,7 +85,7 @@
                   <a href="#dados-veiculos" aria-controls="dados-veiculos" role="tab" data-toggle="tab">
                     <span class="border-active">
                       <span>
-                        <img src="img/icon-dados-veiculos.png">
+                        <img alt="" src="img/icon-dados-veiculos.png">
                       </span>
                     </span>
                     <p>Dados do veículo</p>
@@ -102,7 +95,7 @@
                   <a href="#vistoria" aria-controls="vistoria" role="tab" data-toggle="tab">
                     <span class="border-active">
                       <span>
-                        <img src="img/icon-vistoria.png">
+                        <img alt="" src="img/icon-vistoria.png">
                       </span>
                     </span>
                     <p>Vistoria</p>
@@ -126,19 +119,15 @@
                     <div class="row">
                       <div class="col-5 col-sm-5 col-md-4 col-lg-3">
                         <div class="form-group">
-                          <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                             <div id="carregarImg" onclick="getFile()" class="bt-upload blue">
+                          <div class="upload-field">
+                             <div class="carregar-img js-upload-trigger bt-upload blue" role="button" tabindex="0">
                                <span>RECIBO</span>
                              </div>
-                             <!-- this is your file input tag, so i hide it!-->
-                             <!-- i used the onchange event to fire the form submission-->
-                             <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                             <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
-                             <!-- <input type="submit" value='submit' > -->
-                           </form>
+                             <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                           </div>
                         </div>
                         <div class="form-group">
-                          <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
+                          <div class="upload-field">
                               <div class="load-5">
                                 <div class="ring-2">
                                   <div class="ball-holder">
@@ -146,15 +135,11 @@
                                   </div>
                                 </div>
                               </div>
-                             <div id="carregarImg" onclick="getFile()" class="bt-upload blue carregando">
+                             <div class="carregar-img js-upload-trigger bt-upload blue carregando" role="button" tabindex="0">
                                <span>RECIBO</span>
                              </div>
-                             <!-- this is your file input tag, so i hide it!-->
-                             <!-- i used the onchange event to fire the form submission-->
-                             <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                             <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
-                             <!-- <input type="submit" value='submit' > -->
-                           </form>
+                             <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                           </div>
                         </div>
 
 
@@ -167,32 +152,32 @@
                     <div class="row">
                       <div class="col-12 col-sm-12 col-md-8">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="nome" type="text" name="nome" autocomplete="off" required>
+                          <label for="nome" class="label-name">
                             <span class="content-name">Nome</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-5 col-md-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="cpf" type="text" name="cpf" autocomplete="off" required inputmode="numeric">
+                          <label for="cpf" class="label-name">
                             <span class="content-name">CPF</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-7 col-md-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="e-mail" type="text" name="e-mail" autocomplete="off" required inputmode="email">
+                          <label for="e-mail" class="label-name">
                             <span class="content-name">E-mail</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6 col-md-3">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="telefone" type="text" name="telefone" autocomplete="off" required inputmode="tel">
+                          <label for="telefone" class="label-name">
                             <span class="content-name">Telefone</span>
                           </label>
                         </div>
@@ -200,8 +185,8 @@
                       <div class="col-12 col-sm-6 col-md-5">
                         <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                           <div class="form">
-                            <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder=""  autocomplete="off" required />
-                            <label for="text" class="label-name">
+                            <input id="data-de-nascimento" class="form-control date form_date input-date js-mask-date" inputmode="numeric" size="16" type="text" value="" maxlength="10" name="dtp_input1" placeholder=""  autocomplete="off" required>
+                            <label for="data-de-nascimento" class="label-name">
                               <span class="content-name">
                                 <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                 <span>Data de nascimento</span>
@@ -217,48 +202,48 @@
                     <div class="row">
                       <div class="col-12 col-sm-3 col-md-2 col-lg-2">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="cep" type="text" name="cep" autocomplete="off" required inputmode="numeric">
+                          <label for="cep" class="label-name">
                             <span class="content-name">CEP</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-9 col-md-8 col-lg-8">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="logradouro" type="text" name="logradouro" autocomplete="off" required>
+                          <label for="logradouro" class="label-name">
                             <span class="content-name">Logradouro</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-2 col-md-2 col-lg-2">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="no" type="text" name="no" autocomplete="off" required>
+                          <label for="no" class="label-name">
                             <span class="content-name">Nº</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-4 col-md-3 col-lg-2">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="complemento" type="text" name="complemento" autocomplete="off" required>
+                          <label for="complemento" class="label-name">
                             <span class="content-name">Complemento</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6 col-md-9 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="bairro" type="text" name="bairro" autocomplete="off" required>
+                          <label for="bairro" class="label-name">
                             <span class="content-name">Bairro</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-10 col-md-10 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="cidade" type="text" name="cidade" autocomplete="off" required>
+                          <label for="cidade" class="label-name">
                             <span class="content-name">Cidade</span>
                           </label>
                         </div>
@@ -277,7 +262,7 @@
                   </form>
                 </div>
                 <div class="buttons-tab">
-                  <button type="button" name="button" class="btn btn-primary float-right next" role="tab" data-toggle="tab" aria-controls="negociacao" onclick="">Próximo</button>
+                  <button type="button" name="button" class="btn btn-primary float-right next" role="tab" data-toggle="tab" aria-controls="negociacao">Próximo</button>
                   <div class="clearfix"></div>
                 </div>
               </div>
@@ -293,30 +278,22 @@
                     <div class="row">
                       <div class="col-5 col-sm-5 col-md-4 col-lg-3">
                         <div class="form-group">
-                          <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                             <div id="carregarImg" onclick="getFile()" class="bt-upload blue">
+                          <div class="upload-field">
+                             <div class="carregar-img js-upload-trigger bt-upload blue" role="button" tabindex="0">
                                <span>CNH</span>
                              </div>
-                             <!-- this is your file input tag, so i hide it!-->
-                             <!-- i used the onchange event to fire the form submission-->
-                             <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                             <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
-                             <!-- <input type="submit" value='submit' > -->
-                           </form>
+                             <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                           </div>
                         </div>
                       </div>
                       <div class="col-5 col-sm-5 col-md-4 col-lg-3">
                         <div class="form-group">
-                          <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                             <div id="carregarImg" onclick="getFile()" class="bt-upload blue">
+                          <div class="upload-field">
+                             <div class="carregar-img js-upload-trigger bt-upload blue" role="button" tabindex="0">
                                <span>CRLV</span>
                              </div>
-                             <!-- this is your file input tag, so i hide it!-->
-                             <!-- i used the onchange event to fire the form submission-->
-                             <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                             <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
-                             <!-- <input type="submit" value='submit' > -->
-                           </form>
+                             <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                           </div>
                         </div>
                       </div>
                     </div>
@@ -327,8 +304,8 @@
                     <div class="row">
                       <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="placa" type="text" name="placa" autocomplete="off" required>
+                          <label for="placa" class="label-name">
                             <span class="content-name">Placa</span>
                           </label>
                         </div>
@@ -346,24 +323,24 @@
 
                       <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="chassi" type="text" name="chassi" autocomplete="off" required>
+                          <label for="chassi" class="label-name">
                             <span class="content-name">Chassi</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="renavam" type="text" name="renavam" autocomplete="off" required inputmode="numeric">
+                          <label for="renavam" class="label-name">
                             <span class="content-name">Renavam</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="marca-modelo" type="text" name="marca-modelo" autocomplete="off" required>
+                          <label for="marca-modelo" class="label-name">
                             <span class="content-name">Marca/Modelo</span>
                           </label>
                         </div>
@@ -371,8 +348,8 @@
                       <div class="col-12 col-sm-6 col-md-4 col-lg-4">
                         <div class="form-group input-group date form_datetime" data-date-format="dd/mm/yyyy" data-link-field="dtp_input1">
                           <div class="form">
-                            <input class="form-control date form_date input-date" size="16" type="text" value="" maxlength="10" name="dtp_input1" onkeypress="mascaraData(this, event)" placeholder=""  autocomplete="off" required />
-                            <label for="text" class="label-name">
+                            <input id="ano-do-veiculo" class="form-control date form_date input-date js-mask-date" inputmode="numeric" size="16" type="text" value="" maxlength="10" name="dtp_input1" placeholder=""  autocomplete="off" required>
+                            <label for="ano-do-veiculo" class="label-name">
                               <span class="content-name">
                                 <span class="icon-doc-calendario icones" aria-hidden="true"></span>
                                 <span>Ano do veículo</span>
@@ -388,7 +365,7 @@
                     <div class="row mt-4">
 
                         <div class="stld-fields col-11">
-                          <select id="sel">
+                          <select id="sel" aria-label="Equipamentos do veículo">
                             <option value="default">Selecione</option>
                             <option value="1">Vidro elétrico</option>
                             <option value="2">Trava elétrico</option>
@@ -403,8 +380,7 @@
                       <div class="col-12 col-sm-12">
                         <div class="box-item display-none-box">
                           <div id="box" class="sltd-box">
-                            <span class="sltd-item sample"><span data-ms="remove" class="stld-action ms-actn icon-residencial-lixeira"></span></span>
-                            </span>
+                            <span class="sltd-item sample"><span data-ms="remove" class="stld-action ms-actn icon-residencial-lixeira" role="button" aria-label="Remover item"></span></span>
                           </div>
                         </div>
                       </div>
@@ -416,16 +392,16 @@
                     <div class="row">
                       <div class="col-12 col-sm-3 col-md-3 col-lg-3">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="km" type="text" name="km" autocomplete="off" required>
+                          <label for="km" class="label-name">
                             <span class="content-name">KM</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-9 col-md-9 col-lg-3">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="cor" type="text" name="cor" autocomplete="off" required>
+                          <label for="cor" class="label-name">
                             <span class="content-name">Cor</span>
                           </label>
                         </div>
@@ -446,16 +422,16 @@
                       </div>
                       <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="capacidade-de-passageiros" type="text" name="capacidade-de-passageiros" autocomplete="off" required>
+                          <label for="capacidade-de-passageiros" class="label-name">
                             <span class="content-name">Capacidade de passageiros</span>
                           </label>
                         </div>
                       </div>
                       <div class="col-12 col-sm-6 col-md-6 col-lg-6">
                         <div class="form">
-                          <input type="text" name="text" autocomplete="off" required="">
-                          <label for="text" class="label-name">
+                          <input id="fabricante" type="text" name="fabricante" autocomplete="off" required>
+                          <label for="fabricante" class="label-name">
                             <span class="content-name">Fabricante</span>
                           </label>
                         </div>
@@ -476,87 +452,83 @@
                   <div class="row gallery">
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation active">
-                        <img src="img/dianteira-esq-active.png">
-                        <img src="img/check.png" class="check">
+                        <img alt="" src="img/dianteira-esq-active.png">
+                        <img alt="" src="img/check.png" class="check">
                         <h3>Dianteira esquerda</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/dianteira-dir.png">
+                        <img alt="" src="img/dianteira-dir.png">
                         <h3>Dianteira direita</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <!-- this is your file input tag, so i hide it!-->
-                           <!-- i used the onchange event to fire the form submission-->
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                           <!-- here you can have file submit button or you can write a simple script to upload the file automatically-->
-                           <!-- <input type="submit" value='submit' > -->
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/traseira-esq.png">
+                        <img alt="" src="img/traseira-esq.png">
                         <h3>Traseira esquerda</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/traseira-dir.png">
+                        <img alt="" src="img/traseira-dir.png">
                         <h3>Traseira direita</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/porta-mala.png">
+                        <img alt="" src="img/porta-mala.png">
                         <h3>Porta-mala</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/painel.png">
+                        <img alt="" src="img/painel.png">
                         <h3>Painel</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/motor.png">
+                        <img alt="" src="img/motor.png">
                         <h3>Motor</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                     <div class="col-sm-6 col-md-6 col-lg-4">
                       <div class="animation">
-                        <img src="img/chassi.png">
+                        <img alt="" src="img/chassi.png">
                         <h3>Chassi</h3>
-                        <form action="#type your action here" method="POST" enctype="multipart/form-data" name="myForm">
-                           <div id="carregarImg" onclick="getFile()"><img src="img/camera.png" alt=""></div>
-                           <div style="height: 0px;width: 0px; overflow:hidden;"><input id="upfile" type="file" value="upload" onchange="sub(this)"></div>
-                         </form>
+                        <div class="upload-field">
+                           <div class="carregar-img js-upload-trigger" role="button" tabindex="0"><img src="img/camera.png" alt="Enviar foto"></div>
+                           <input class="js-upload-input d-none" type="file" accept="image/*" aria-hidden="true" tabindex="-1">
+                         </div>
                        </div>
                     </div>
                   </div>
@@ -595,199 +567,19 @@
           </div>
         </div>
         <!-- <footer>
-          <img src="img/logo-ebix.png" class="check">
+          <img alt="" src="img/logo-ebix.png" class="check">
         </footer> -->
 
 
 
-        <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
-        <script src="js/jquery-3.3.1.slim.min.js"></script>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/offcanvas.js"></script>
-        <script  src="js/script.js"></script>
 
-        <!-- animação telas -->
-        <!-- <script>
-          $(document).ready(function(){
-            $("li.menu-etapas").click(function(){
-              $(".tab-pane").addClass("animation-to-right");
-              $(".tab-pane").removeClass("animation-to-left");
-            });
-          });
-        </script>
-
-        <script>
-          $(document).ready(function(){
-            $("li.menu-etapas").click(function(){
-              $(".tab-pane").addClass("animation-to-left");
-              $(".tab-pane").removeClass("animation-to-right");
-            });
-          });
-        </script> -->
-
-
-        <script>
-          $(document).ready(function(){
-            $("li.menu-etapas").prev().removeClass({"animation-to-right"});
-            $("li.menu-etapas").next().removeClass({"animation-to-right"});
-          });
-        </script>
-
-        <script>
-          $(document).ready(function(){
-            $("button.next").click(function(){
-              $(".tab-pane").addClass("animation-to-left");
-              $(".tab-pane").removeClass("animation-to-right");
-            });
-          });
-        </script>
-
-        <script>
-          $(document).ready(function(){
-            $("button.prev").click(function(){
-              $(".tab-pane").addClass("animation-to-right");
-              $(".tab-pane").removeClass("animation-to-left");
-            });
-          });
-        </script>
-         <!-- fim animação telas -->
-
-        <!-- Scripts NAVTABS -->
-        <script type="text/javascript">
-          // script for tab steps
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-              var href = $(e.target).attr('href');
-              var $curr = $(".process-model  a[href='" + href + "']").parent();
-
-              $('.process-model li').removeClass();
-
-              $curr.addClass("active");
-              $curr.prevAll().addClass("visited");
-            });
-          // end  script for tab steps
-        </script>
-
-
-        <script type="text/javascript">
-          (function($) {
-            'use strict';
-            $(document).on('show.bs.tab', '.nav-tabs-responsive [data-toggle="tab"]', function(e) {
-              var $target = $(e.target);
-              var $tabs = $target.closest('.nav-tabs-responsive');
-              var $current = $target.closest('li');
-              var $parent = $current.closest('li.dropdown');
-              $current = $parent.length > 0 ? $parent : $current;
-              var $next = $current.next();
-              var $prev = $current.prev();
-              var updateDropdownMenu = function($el, position){
-                $el
-                  .find('.dropdown-menu')
-                  .removeClass('pull-xs-left pull-xs-center pull-xs-right')
-                  .addClass( 'pull-xs-' + position );
-              };
-
-              $tabs.find('>li').removeClass('next prev');
-              $prev.addClass('prev');
-              $next.addClass('next');
-
-              updateDropdownMenu( $prev, 'left' );
-              updateDropdownMenu( $current, 'center' );
-              updateDropdownMenu( $next, 'right' );
-            });
-
-            })(jQuery);
-        </script>
-
-        <script type="text/javascript">
-          $(document).ready(function() {
-              /*disable non active tabs
-              $('.nav li').not('.active').addClass('disabled');
-              $('.nav li').not('.active').find('a').removeAttr("data-toggle");*/
-
-              $('button.next').click(function(){
-                  /*enable next tab*/
-                  $('.nav li.active').next('li').removeClass('disabled');
-                  $('.nav li.active').next('li').find('a').attr("data-toggle","tab").trigger("click");
-              });
-
-              $('button.prev').click(function() {
-                  $('.nav li.active').prev('li').find('a').trigger("click");
-              });
-          });
-        </script>
-        <!-- FIM Scripts NAVTABS -->
-
-        <!-- Script Toogle -->
-        <script>
-        function toggleFunction(x) {
-            x.classList.toggle("change");
-        }
-        </script>
-        <!-- Script Tooltip -->
-        <script>
-            jQuery(function() {
-            jQuery('[data-toggle="tooltip"]').tooltip();
-            })
-        </script>
-        <!-- Script Popover -->
-        <script>
-            $(document).ready(function(){
-              $('[data-toggle="popover"]').popover();
-            });
-
-            $("[data-toggle=popover]")
-            .popover({html:true})
-        </script>
-        <!-- Script carregar fotos -->
-        <script>
-            function getFile() {
-            document.getElementById("upfile").click();
-            }
-
-            function sub(obj) {
-            var file = obj.value;
-            var fileName = file.split("\\");
-            document.getElementById("carregarImg").innerHTML = fileName[fileName.length - 1];
-            document.myForm.submit();
-            event.preventDefault();
-            }
-        </script>
-
-        <!-- Script Datepicker-->
-        <script type="text/javascript" src="js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
-        <script type="text/javascript" src="js/locales/bootstrap-datetimepicker.pt-BR.js" charset="UTF-8"></script>
-        <script type="text/javascript">
-          $('.form_date').datetimepicker({
-            language:  'pt-BR',
-            autoclose: 1,
-            minView: 2,
-            format: "dd/mm/yyyy"
-            });
-        </script>
-        <script>
-          // Máscara formato data no campo date 99/99/9999
-          function mascaraData(campo, e){
-            var kC = (document.all) ? event.keyCode : e.keyCode;
-            var data = campo.value;
-            if( kC!=8 && kC!=46 ){
-              if( data.length==2 ){
-                campo.value = data += '/';
-              }else if( data.length==5){
-              campo.value = data += '/';
-            }else
-          campo.value = data;
-          }
-        }
-        </script>
-        <!-- Script display none box-item form select -->
-        <script>
-          $(document).ready(function(){
-            $(".add-mais").click(function(){
-              // $(".box-item").addClass("display-none-box");
-              $(".box-item").removeClass("display-none-box");
-            });
-          });
-        </script>
-    </body>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/locales/bootstrap-datetimepicker.pt-BR.js"></script>
+    <script src="js/vistoria.js"></script>
+  </body>
 </html>

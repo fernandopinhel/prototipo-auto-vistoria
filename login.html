@@ -2,68 +2,37 @@
 <html lang="pt-br">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Auto Vistoria</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: blob:; connect-src 'self'; form-action 'self'; base-uri 'self'; object-src 'none'">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Acesso ao protótipo Auto Vistoria.">
+    <title>Login | Auto Vistoria</title>
+    <link rel="icon" type="image/png" href="img/icon-car.png">
 
-    <!-- Bootstrap -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilo.css" rel="stylesheet">
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
   </head>
   <body class="login">
     <div>
-      <img src="img/logologin.png" class="center-block" />
-      <div class="form">
-        <input type="text" name="text" autocomplete="off" required />
-        <label for="text" class="label-name">
-          <span class="content-name">
-            CPF
-          </span>
-        </label>
-      </div>
+      <img alt="Auto Vistoria" src="img/logologin.png" class="center-block">
+      <form class="js-login-form" novalidate>
+        <div class="form">
+          <input id="login-cpf" type="text" autocomplete="off" inputmode="numeric" maxlength="14" required aria-describedby="login-erro">
+          <label for="login-cpf" class="label-name">
+            <span class="content-name">CPF</span>
+          </label>
+        </div>
+        <p id="login-erro" class="login-erro" role="alert" hidden>Informe um CPF válido.</p>
 
-      <button>Entrar</button>
+        <button type="submit">Entrar</button>
+      </form>
     </div>
 
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-
-    <script src="js/jquery-3.3.1.slim.min.js"></script>
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-
-      $( document ).ready(function() {
-        $(".input-login").each(function() {
-          if ($(this).val() != "") {
-            $(this).parent().addClass("animation");
-          }
-        });
-      });
-
-      //Add animation when input is focused
-      $(".login-input").focus(function(){
-        $(this).parent().addClass("animation animation-color");
-      });
-
-      //Remove animation(s) when input is no longer focused
-      $(".login-input").focusout(function(){
-        if($(this).val() === "")
-          $(this).parent().removeClass("animation");
-        $(this).parent().removeClass("animation-color");
-      })
-    </script>
-
-
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/login.js"></script>
   </body>
 </html>
